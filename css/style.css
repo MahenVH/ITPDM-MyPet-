@@ -8,11 +8,18 @@ body{
   background-color: #2F514E;
 }
 
-
+.logo{
+  width: 200;
+  height:200;
+  margin: auto;
+  border-bottom-left-radius: 99%;
+  border-bottom-right-radius:544454%;
+}
 .TopBar{
   width:  1350;
-  height: 100px;
+  height: 200px;
   overflow: hidden;
+
   margin: auto;
   border-bottom-left-radius: 99%;
   border-bottom-right-radius: 99%;
@@ -28,8 +35,8 @@ header{
 }
 header nav{
   float: right;
-  margin-top: 10px;
-  width: 25%auto;
+  margin-top: 70px;
+  width: 25%;
 
 }
 
