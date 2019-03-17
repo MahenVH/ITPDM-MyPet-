@@ -26,6 +26,21 @@ body{
   background-color: #FFFFFF;
 }
 
+.gallery-container a div
+{
+
+  width:250px;
+  height:250px;
+  float:left;
+  background-color:red;
+  margin:10px 10px;
+
+}
+
+.gallery-Upload{
+  float:left;
+}
+
 header{
   background: #2F514E;
   color: #FFFFFF;
