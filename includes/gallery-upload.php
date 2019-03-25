@@ -19,14 +19,34 @@ if (isset($_POST['submit'])) {
   $fileName = $file["name"];
   $fileType = $file["type"];
   $fileTempName = $file["tmp_name"];
-  $fileName = $file["error"];
-  $fileName = $file["size"];
+  $fileError = $file["error"];
+  $fileSize = $file["size"];
 
   $fileExt = explode(",",$fileName);
   $fileActualExt = strtolower(end($fileExt));
 
   /*Types of allowed file types */
   $allowed = array("jpg", "jpeg", "png");
+
+  if (in_array($fileActualExt, $allowed)){
+    if($fileError ===0){
+      if ($fileSize > 20000) {
+
+      }else{
+        echo "File size too big";
+        exit();
+      }
+
+    } else {
+      echo "You had an error";
+      exit();
+    }
+
+
+  }else {
+    echo "Upload a proper file type";
+    exit();
+  }
 
 
 }
