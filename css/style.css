@@ -26,21 +26,35 @@ body{
   background-color: #FFFFFF;
 }
 
-.gallery-container a div
+.gallery-container
 {
 
-  width:250px;
+  width:100%;
   height:250px;
-  float:left;
-  background-color:red;
-  margin:10px 10px;
+  background-color:pink;
+
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-content: space-between;
+
+}
+
+.item
+{
+  background-color: green;
+  flex-grow: 1;
+
 
 }
 
 .gallery-Upload{
-  float:left;
+  float:center;
   position: absolute;
   bottom: 0;
+  width: 50px;
 }
 
 header{

@@ -31,6 +31,11 @@ if (isset($_POST['submit'])) {
   if (in_array($fileActualExt, $allowed)){
     if($fileError ===0){
       if ($fileSize > 20000) {
+        /*Creating a unique id so that it doesnt overwrite files */
+        $imageFullName = $newFileName . "." . uniqid("",true) .".". $fileActualExt ;
+        $fielDestination = "img/gallery/" .$imageFullName;
+
+        include_once "db.php";
 
       }else{
         echo "File size too big";
