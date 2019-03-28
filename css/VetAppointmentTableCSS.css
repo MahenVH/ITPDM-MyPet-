@@ -1,0 +1,97 @@
+/*Basic Layout */
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+/*  font: 15px/1.5 Arial, Helvetica, sans-serif;*/
+  padding: 0;
+  margin: 0;
+  background-color: #2F514E;
+}
+
+h2{
+  margin-left: 222px;
+  text-align: left;
+  margin-left: 20px;
+  color: white;
+  font-weight: lighter;
+}
+
+.logo{
+  width: 200;
+  height:200;
+  margin: auto;
+  border-bottom-left-radius: 99%;
+  border-bottom-right-radius:544454%;
+}
+.TopBar{
+  width:  1350;
+  height: 200px;
+  overflow: hidden;
+
+  margin: 0;
+  border-bottom-left-radius: 99%;
+  border-bottom-right-radius: 99%;
+  background-color: #FFFFFF;
+}
+
+header{
+  background: #2F514E;
+  color: #FFFFFF;
+  padding-top: 1px;
+  min-height: 70px;
+
+}
+header nav{
+  float: right;
+  margin-top: 70px;
+  width: 500px;
+
+}
+
+header a{
+  color: #2F514E;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+
+header a:hover{
+  color: #cccccc;
+  font-weight: bold;
+}
+
+footer{
+  padding;20px;
+  margin-top:20px;
+  color:#ffffff;
+  background-color: #e8491d;
+  text-align: center;
+  position: relative;
+  margin-bottom: 25px;
+  width: 100%;
+
+}
+
+#table{
+  font-family: serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#table td, #table th{
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#table tr:nth-child(even){background-color: #f2f2f2;}
+
+#table tr:hover{background-color: #ddd;}
+
+#table th{
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+}
