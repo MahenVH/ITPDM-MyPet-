@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="./css/login&signup.css">
+
+      <script type="text/javascript">
+
+      function email()
+      {
+      	var name= document.getElementById("uid").value;
+      	if((name == "") || (name == null))
+      	{
+      		alert("Please enter your email address");
+      		return false;
+      	}
+      	return true;
+      }
+
+      function password()
+      {
+        var pwd= document.getElementById("pwd").value;
+        if((pwd == "") || (pwd == null))
+        {
+          alert("Please enter your password");
+          return false;
+        }
+        return true;
+      }
+
+      function validate()
+      {
+       	 if(email() && password())
+      	{
+      		alert("You have registered to the site");
+      	}
+      	else
+      	{
+      		event.preventDefault();
+      	}
+      }
+
+      </script>
+  </head>
+  <body>
+    <header>
+      <div class="TopBar">
+        <img src="D:\ITPDM_Project\img\catdog.png" width="250px" height="180px" align=top >
+
+      </div>
+    </header>
+<main>
+  <section>
+
+  <div class="login">
+    <form>
+        <h1>Login Page</h1>
+      <input type="text" name="uid" id="uid" placeholder="E-mail">
+      <input type="password" name="pwd" id="pwd" placeholder="Password">
+      <button type="submit" name="submit" onclick="validate()">Login</button>
+    </form>
+    if you don't have an account <a href="signup.html">Sign up</a>
+   </div>
+</section>
+</main>
+
+
+
+<footer>General web design, Copyright &copy 2018</footer>
+  </body>
+
+
+</html>
