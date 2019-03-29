@@ -36,6 +36,98 @@ harset="utf-8">
     </div>
   </form>
 
+<script type="text/javascript">
+
+  function validateName()
+  	{
+  		var name = document.getElementById("UName").value;
+  		if((name == "")||(name == null)|| (name (isNaN)== true))
+  		{
+  			alert("Please enter your name");
+  			return false;
+  		}
+  		return true;
+  	}
+
+
+  function validatePassword()
+  	{
+  		var pwd = document.getElementById("password").value;
+  		var cpwd = document.getElementById("confirm_password").value;
+  		if((pwd.length < 5)||( pwd != cpwd))
+  		{
+  			alert("Please enter a correct Password and enter the to Confirm password");
+  			return false;
+  		}
+  		return true;
+  	}
+
+
+  function validateName()
+  	{
+  		var name = document.getElementById("PetName").value;
+  		if((name == "")||(name == null)|| (name (isNaN)== true))
+  		{
+  			alert("Please enter your name");
+  			return false;
+  		}
+  		return true;
+  	}
+
+
+  function validateDateVac()
+  	{
+  		var dateString = document.getElementById("DOV").value;
+  		var myDate = new Date(dateString);
+  		var today = new Date();
+  		if(myDate > today)
+  		{
+  			alert("Please enter a correct date");
+  			return false;
+  		}
+  		return true;
+  	}
+
+
+  function validateEmail()
+  	 {
+  		var email = document.getElementById("email").value;
+  		var at = email.indexOf("@");
+  		var dt = email.lastIndexOf(".");
+  		var len = email.length;
+
+  		if((at < 2)||(dt-at < 2)||(len-dt < 2))
+  		{
+  			alert("Please enter a valid email address");
+  			return false;
+  		}
+  		return true;
+  	  }
+
+
+  function validateAddress()
+  	{
+  		var add = document.getElementById("address").value;
+  		if((add == "")||(add == null))
+  		{
+  			alert("Please enter your address");
+  			return false;
+  		}
+  		return true;
+  	}
+
+
+  function validatePost()
+  	{
+  		var post = document.getElementById("postcode").value;
+  		if((post == "")||(post == null)|| (name (isNaN)== false))
+  		{
+  			alert("Please enter your postcode");
+  			return false;
+  		}
+  		return true;
+  	}
+    </script>
 
 
 <footer>General web design, Copyright &copy 2018</footer>
