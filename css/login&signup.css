@@ -9,6 +9,19 @@ body{
   background-color: #2F514E;
 }
 
+ul{
+  margin: 0;
+  padding: 0;
+}
+
+li{
+
+ float: left;
+ display: inline;
+ padding: 0 20px 0 20px;
+}
+
+
 h2{
   margin-left: 222px;
   text-align: left;
@@ -63,7 +76,7 @@ header a:hover{
 
 footer{
   padding;20px;
-  margin-top:190px;
+  margin-top:20px;
   color:#ffffff;
   background-color: #e8491d;
   text-align: center;
@@ -71,13 +84,7 @@ footer{
   margin-bottom: 25px;
   width: 100%;
 
-
-
-
 }
-
-
-
 
 
 /*my code*/
