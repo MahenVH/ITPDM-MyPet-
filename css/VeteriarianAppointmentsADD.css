@@ -73,6 +73,18 @@ footer{
 
 }
 
+ul{
+  margin: 0;
+  padding: 0;
+}
+
+li{
+
+ float: left;
+ display: inline;
+ padding: 0 20px 0 20px;
+}
+
 .center{
   margin: auto;
 width: 60%;
