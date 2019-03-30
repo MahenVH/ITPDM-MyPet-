@@ -44,13 +44,17 @@
             mysqli_stmt_execute($stmt);
             $result = mysqli_stmt_getresult($stmt);
 
-            while
+            while ($row = mysqli_fetch_assoc($result)){
+              echo '<a href="#">
+                <div class="item">Hello</div>
+                <h2>".$row["titleGallery"]"
+              </a>';
+
+            }
 
           }
 
-          echo '<a href="#">
-            <div class="item">Hello</div>
-          </a>';
+
           ?>
         </section>
       </div>
