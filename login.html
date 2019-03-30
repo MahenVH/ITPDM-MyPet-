@@ -33,7 +33,7 @@
       {
        	 if(email() && password())
       	{
-      		alert("You have registered to the site");
+      		alert("Login Sucessfull ");
       	}
       	else
       	{
@@ -46,9 +46,19 @@
   <body>
     <header>
       <div class="TopBar">
-        <img src="D:\ITPDM_Project\img\catdog.png" width="250px" height="180px" align=top >
-
+        <img src=".\img\catdog.png" width="250px" height="180px" align=top >
+        <nav>
+          <ul>
+            <li ><a href="HomePage.html">Home</a></li>
+            <li ><a href="Gallery.html">Gallery</a></li>
+            <li><a href="RegisterPetDetails.html">Register Your Pet</a></li>
+            <li class="current"><a href="login">Login</a></li>
+            <li ><a href="TrackingVetAppointments_VIEW_UPDATE_DELETE.html">View Update Delete</a></li>
+            <li><a href="TrackingVetAppointmentsADD.html">Add </a></li>
+          </ul>
+        </nav>
       </div>
+
     </header>
 <main>
   <section>
@@ -59,8 +69,15 @@
       <input type="text" name="uid" id="uid" placeholder="E-mail">
       <input type="password" name="pwd" id="pwd" placeholder="Password">
       <button type="submit" name="submit" onclick="validate()">Login</button>
+
+
+
+
+        <br><a float="right" href="" >Forgot Password</a></br><br> <a href="signup.html" >Sign up</a></br>
+
+
     </form>
-    if you don't have an account <a href="signup.html">Sign up</a>
+
    </div>
 </section>
 </main>

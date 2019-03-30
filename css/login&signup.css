@@ -9,6 +9,19 @@ body{
   background-color: #2F514E;
 }
 
+ul{
+  margin: 0;
+  padding: 0;
+}
+
+li{
+
+ float: left;
+ display: inline;
+ padding: 0 20px 0 20px;
+}
+
+
 h2{
   margin-left: 222px;
   text-align: left;
@@ -74,9 +87,6 @@ footer{
 }
 
 
-
-
-
 /*my code*/
 .login {
   width: 400px;
@@ -98,11 +108,20 @@ footer{
 }
 a{
   text-decoration: none;
+
 }
+
+
 .login a {
   float: right;
   color: #000;
+  cursor: pointer;
 }
+
+.login a:hover{
+  color: #fff;
+}
+
 .signup {
   width: 400px;
   margin: 0 auto;
@@ -111,6 +130,10 @@ a{
 .signup a {
   float: right;
   color: #000;
+  cursor: pointer;
+}
+.signup a:hover{
+  color: #fff;
 }
 
 .login button {
