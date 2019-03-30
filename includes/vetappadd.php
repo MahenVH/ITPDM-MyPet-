@@ -1,0 +1,26 @@
+<?php
+$entry=$_POST("entryno");
+$petname=$_POST("petname");
+$vetname=$_POST("vetname");
+$appday=$_POST("appday");
+$apptime=$_POST("apptime");
+$email=$_POST("email");
+
+$con=mysqli_connect("loacalhost","root","","MyPet");
+
+if(!$con)
+{
+die("cannot connect to DB server");
+}
+
+$sql="INSERT INTO 'MyPet','VetAppointment'(
+  'entry',
+  'petname',
+  'vetname',
+  'appday',
+  'apptime',
+  'email')
+  VALUES ('".$entry."','".$petname."','".$vetname."','".$appday."','".$apptime."','".$email."');";
+
+
+ ?>
