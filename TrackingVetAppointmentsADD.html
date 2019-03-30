@@ -11,7 +11,7 @@
 
 function validatePetName()
 {
-	var petname = document.getElementById("petname").value;
+	var petname = document.getElementById ("petname").value;
 		if((petname == "") || (petname == null))
 		{
 			alert("Please enter your Pet's name");
@@ -108,31 +108,31 @@ function validate()
     <form >
       <div class="center">
       <label for="entryno">Entry No.</label>
-      <input type="number" name="entryno" value="">
+      <input type="number" id="entryno" name="entryno" value="">
       </div>
       <div class="center">
       <label for="petname">Pet Name</label>
-      <input type="text" name="petname" value="">
+      <input type="text" id="petname" name="petname" value="">
       </div>
       <div class="center">
       <label for="vetname">Veterinarian Name</label>
-      <input type="text" name="vetname" value="">
+      <input type="text" id="vetname" name="vetname" value="">
       </div>
       <div class="center">
       <label for="vetclinic">Veterinarian Clinic</label>
-      <input type="text" name="vetclinic" value="">
+      <input type="text" id="vetclinic" name="vetclinic" value="">
       </div>
       <div class="center">
       <label for="appday">Appointment day</label>
-      <input type="date" name="appday" value="">
+      <input type="date" id="appday" name="appday" value="">
       </div>
       <div class="center">
       <label for="apptime">Appointment time</label>
-      <input type="time" name="apptime" value="">
+      <input type="time" id="apptime" name="apptime" value="">
       </div>
       <div class="center">
       <label for="email">Email</label>
-      <input type="text" name="email" value="">
+      <input type="text" id="email" name="email" value="">
       </div>
       <div>
       <button type="submit" name="add" class="button" onclick="validate()">Add</button>
