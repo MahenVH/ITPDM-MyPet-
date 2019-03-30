@@ -63,13 +63,16 @@ header a:hover{
 
 footer{
   padding;20px;
-  margin-top:20px;
+  margin-top:190px;
   color:#ffffff;
   background-color: #e8491d;
   text-align: center;
   position: relative;
   margin-bottom: 25px;
   width: 100%;
+
+
+
 
 }
 
@@ -98,11 +101,20 @@ footer{
 }
 a{
   text-decoration: none;
+
 }
+
+
 .login a {
   float: right;
   color: #000;
+  cursor: pointer;
 }
+
+.login a:hover{
+  color: #fff;
+}
+
 .signup {
   width: 400px;
   margin: 0 auto;
@@ -111,6 +123,10 @@ a{
 .signup a {
   float: right;
   color: #000;
+  cursor: pointer;
+}
+.signup a:hover{
+  color: #fff;
 }
 
 .login button {
