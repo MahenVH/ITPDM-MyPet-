@@ -4,7 +4,7 @@ if (isset($_POST['submit'])) {
 
   $newFileName = $_POST['filename'];
   /*if a file name is not entered by the user,the file will be called gallery*/
-  if ($_POST['filename']) {
+  if (empty($newFileName)) {
     $newFileName = "gallery";
   } else {
     /*If there are spaces in the file name,will replace them with dashes */
@@ -30,12 +30,40 @@ if (isset($_POST['submit'])) {
 
   if (in_array($fileActualExt, $allowed)){
     if($fileError ===0){
-      if ($fileSize > 20000) {
+      if ($fileSize < 20000) {
         /*Creating a unique id so that it doesnt overwrite files */
         $imageFullName = $newFileName . "." . uniqid("",true) .".". $fileActualExt ;
-        $fielDestination = "img/gallery/" .$imageFullName;
+        $fileDestination = "../img/gallery/" .$imageFullName;
 
         include_once "db.php";
+
+        $sql = "SELECT * FROM gallery; ";
+        /*Writing the prepared statement */
+        $stmt = mysqli_stmt_init($conn);
+
+        /*If statement fails ,give error message*/
+        if(!mysqli_stmt_prepare($stmt, $sql)) {
+          echo "SQL statement failed";
+        }else {
+            mysqli_stmt_execute($stmt);
+            $result = mysqli_stmt_getresult($stmt);
+            $rowcount = mysqli_num_rows($result);
+            $setImageOrder = $rowcount +1;
+
+            $sql = "INSERT INTO gallery (titleGallery, descGallery, imgFullNameGallery) VALUES(?, ? , ?);";
+            if(!mysqli_stmt_prepare($stmt, $sql)) {
+              echo "SQL statement failed";
+            }else {
+              mysqli_stmt_bind_param($stmt, "sss",$imageTitle ,$imageDesc, $imageFullName);
+              mysqli_stmt_execute($stmt);
+
+              upload_file($fileTempName, $fileDestination);
+
+              header("Location: ../Gallery.php?Upload=successfull");
+
+            }
+
+        }
 
       }else{
         echo "File size too big";

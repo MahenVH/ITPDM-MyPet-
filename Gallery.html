@@ -34,7 +34,7 @@
           <?php
           include_once 'includes/db.php';
 
-          $sql = "SELECT * FROM gallery ORDER BY columname "
+          $sql = "SELECT * FROM gallery "
           $stmt = mysqli_stmt_init($conn);
           if(!mysqli_stmt_prepare($stmt, $ sql)){
               echo "SQL statement failed";
@@ -48,44 +48,12 @@
 
           }
 
-          <a href="#">
+          echo '<a href="#">
             <div class="item">Hello</div>
-          </a>
-
-          <a href="#">
-            <div class="item">Hello</div>
-          </a>
-
-          <a href="#">
-            <div class="item">Hello</div>
-          </a>
-
-          <a href="#">
-            <div class="item">Hello</div>
-          </a>
-
-          <a href="#">
-            <div class="item">Hello</div>
-          </a>
-
-          <a href="#">
-            <div class="item">Hello</div>
-          </a>
-
-          <a href="#">
-            <div class="item">Hello</div>
-          </a>
-
-
-
+          </a>';
+          ?>
         </section>
       </div>
-        <?php
-
-          ?>
-
-
-
 
       </section>
       <div class="gallery-upload">
