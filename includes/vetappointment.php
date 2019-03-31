@@ -1,10 +1,17 @@
 <?php
-$con = mysqli_connect('localhost','root','');
 
-if (!$con) {
-  echo "Not connected to server";
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "mypet";
+
+$conn = mysqli_connnect($servername,$username,$password,$dbname);
+
+
+if (!$conn) {
+  echo "Not connnected to server";
 }
-if (mysqli_select_db($con,'mypet')) {
+if (mysqli_select_db($conn,'mypet')) {
   echo "Databse not selected";
 }
 
@@ -18,12 +25,12 @@ $email=$_POST['email'];
 
 $sql="INSERT INTO vetappointment (petname,vetname,vetclinicname,appday,apptime,email) VALUES ('$petname','$vetname','$vetclinicname','$appday','$apptime','$email')";
 
-if (mysqli_query($con,$sql)) {
+if (mysqli_query($conn,$sql)) {
   echo 'Not inserted';
 }
 else {
   echo "inserted";
 }
 
-header('refresh:2; url=TrackingVetAppointments_VIEW_UPDATE_DELETE.html')
+  header("Location: TrackingVetAppointmentsADD.php");
  ?>
