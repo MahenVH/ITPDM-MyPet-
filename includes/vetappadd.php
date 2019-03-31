@@ -30,9 +30,19 @@ $sql="INSERT INTO 'vetappointment' (
   'email')
   VALUES ('".$entry."','".$petname."','".$vetname."','".$appday."','".$apptime."','".$email."');";
 
+  if (mysqli_query($conn, $sql)) {
+        echo "New record created successfully";
+  } else {
+        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+  }
 
+$results = mysqli_query($sql);
+mysqli_close();
+/*
 
-header("Location:.\TrackingVetAppointmentsADD.php?upload=successfull");
+$sql = "INSERT INTO vetappointment (entry, petname, vetname,vetclinicname ,appday,apptime,email) VALUES (?,?,?,?,?,?,?);";
+*/
+header("Location:../TrackingVetAppointmentsADD.php?upload=successfull");
 
 
 

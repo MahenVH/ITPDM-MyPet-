@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -106,7 +107,7 @@ function validate()
 
     </header>
     <?php
-    echo '
+    echo'
     <form action="includes/vetappadd.php" method="post">
       <div class="center">
       <label for="entryno">Entry No.</label>
@@ -143,6 +144,7 @@ function validate()
     </form>
     ';
     ?>
+
 
   </body>
 </html>
