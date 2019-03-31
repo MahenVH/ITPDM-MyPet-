@@ -105,7 +105,7 @@ function validate()
       </div>
 
     </header>
-    <form action="includes\vetappadd.php" method="post">
+    <form action="includes/vetappadd.php" method="post">
       <div class="center">
       <label for="entryno">Entry No.</label>
       <input type="number" id="entryno" name="entryno" value="">
