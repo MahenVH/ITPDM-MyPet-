@@ -59,7 +59,7 @@
       </section>
       <?php
       echo '<div class="gallery-upload">
-        <form action="includes/gallery-upload.php" method="post">
+        <form action="includes/gallery-upload.php" method="post" enctype="multipart/form-data">
         <label> Name </label><input type="text" name="filename" placeholder="Filename.."><br>
         <input type="text" name="filetitle" placeholder="Image Title.."><br>
         <input type="text" name="filedesc" placeholder="Image description.."><br>
