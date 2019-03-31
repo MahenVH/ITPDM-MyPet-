@@ -2,7 +2,7 @@
 $con = mysqli_connect("localhost","root","");
 if(!con)
 {
-	echo'not connected to the server'
+	echo'not connected to the server';
 }
 if (!mysqli_select_db($con,'pets'));
 	{
