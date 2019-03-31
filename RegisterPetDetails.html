@@ -25,20 +25,45 @@
     <div align="center">
       <h1>Register Pet Details</h1>
 
-      Username : <input type="username" name="username" /><br/>
-      Password : <input type="password" name="pwd" /><br/>
-       Petname : <input type="Petname" name="Petname" /><br/>
-           DOB : <input type="date of birth" name="dob" /><br/>
-      <input type="radio" name="gender" value="male" checked> Male
-      <input type="radio" name="gender" value="female"> Female<br>
-         Email : <input type="email" name="email" /><br />
-      Telephone: <input type="telephone" name="tel" /><br />
-       Address : <input type="address" name="add" /><br />
-     Post Code : <input type="postcode" name="ptc" /><br />
+      <form >
+      <div class="center">
+      <label for="Username">Username.</label>
+      <input type="text" id="userid" name="userid" value="">
+      </div>
+	<div class="center">
+      <label for="Password">Password.</label>
+      <input type="password" id="passwordid" name="passwordid" value="">
+      </div>
+      <div class="center">
+      <label for="petname">Pet Name</label>
+      <input type="text" id="petname" name="petname" value="">
+      </div>
 
-    <input type="submit" value="Submit" />
-    </div>
-  </form>
+	<div class="center">
+      <label for="petcolor">Pet Color</label>
+      <input type="text" id="colorid" name="colorid" value="">
+      </div>
+
+	<div class="center">
+      <label for="petbreed">Pet Breed</label>
+      <input type="text" id="bid" name="bid" value="">
+      </div>
+
+      <div class="center">
+      <label for="appday">DOB</label>
+      <input type="date" id="dob" name="dob" value="">
+      </div>
+
+      <div class="center">
+      <label for="email">Email</label>
+      <input type="text" id="email" name="email" value="">
+      </div>
+      <div>
+      <button type="submit" name="add" class="button" onclick="validate()">Add</button>
+      <button type="reset" name="clear" class="button">Clear</button>
+      </div>
+    </form>
+
 
 <script type="text/javascript">
 
@@ -67,30 +92,63 @@
   	}
 
 
-  function validateName()
-  	{
-  		var name = document.getElementById("PetName").value;
-  		if((name == "")||(name == null)|| (name (isNaN)== true))
+    function validatePetName()
+  {
+  	var name = document.getElementById("petName").value;
+
+  	if(!name.match(/^[A-Za-z]+$/))
   		{
-  			alert("Please enter your name");
-  			return false;
+
+  	   alert("Please enter your pet name");
+  		return false;
   		}
-  		return true;
-  	}
+  	return true;
+
+  }
+
+  function validateColour()
+{
+	var colour = document.getElementById("colour").value;
+	if(!colour.match(/^[A-Za-z]+$/))
+		{
+
+	   alert("Please enter your pet colour");
+		return false;
+		}
+	return true;
+}
+
+function validateBreed()
+{
+	var breed = document.getElementById("breed").value;
+	if(!breed.match(/^[A-Za-z]+$/))
+		{
+
+	   alert("Please enter your pet breed");
+		return false;
+		}
+	return true;
+}
 
 
-  function validateDateVac()
+    function validateDOB()
+  {
+  	var selectedText = document.getElementById('dob').value;
+  	var selectedDate = new Date(selectedText);
+  	var now = new Date();
+
+  	if(selectedDate >= now)
   	{
-  		var dateString = document.getElementById("DOV").value;
-  		var myDate = new Date(dateString);
-  		var today = new Date();
-  		if(myDate > today)
+  		alert("Please enter a valid Birth Date");
+  		return false;
+  	}
+  	if((dateString == "")||(dateString == null))
   		{
-  			alert("Please enter a correct date");
+  			alert("Please enter the date");
   			return false;
   		}
-  		return true;
-  	}
+  	 return true;
+  }
 
 
   function validateEmail()
@@ -120,17 +178,18 @@
   		return true;
   	}
 
+    function validate()
+    	{
+    		if(validateName()  && validatePassword() && validatePetName() && validateColour() validateBreed() validateDOB() validateEmail())
+    			{
+    				alert("Pet registration is completed");
+    			}
+    		else
+    			{
+    				even.preventDefault();
+    			}
+    	}
 
-  function validatePost()
-  	{
-  		var post = document.getElementById("postcode").value;
-  		if((post == "")||(post == null)|| (name (isNaN)== false))
-  		{
-  			alert("Please enter your postcode");
-  			return false;
-  		}
-  		return true;
-  	}
     </script>
 
 
