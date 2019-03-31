@@ -23,11 +23,8 @@ if(isset($_POST['add'])){
 
 
 
-<<<<<<< HEAD
-$sql = "INSERT INTO `registerpetdetails`(`UserName`,`password`,`cpwd`,`petname`,`PetColor`,`PetBreed`,`DOB`,`email`,`address`) VALUES (?,?,?,?,?,?,?,?,?)";
-=======
+
 $sql = "INSERT INTO 'registerpetdetails'('UserName','password', 'petname', 'petcolor', 'PetBreed', 'DOB', 'email', 'address') VALUES ('$UserName','$password','$petname','$PetColor','$PetBreed','$DOB','$email','$address')";
->>>>>>> 59d1184e3afd4a218ffdfab257147abfd7dcb862
 if (!mysqli_query($con,$sql))
 {
 	echo 'Not Inserted';
