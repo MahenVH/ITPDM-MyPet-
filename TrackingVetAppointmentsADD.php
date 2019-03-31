@@ -106,7 +106,7 @@ function validate()
 
     </header>
 
-    <form action="D:\XAMP\htdocs\ITPDM-MyPet-\includes\vetappointment.php" method="post">
+    <form action=".\includes\vetappointment.php" method="post">
       <div class="center">
       <label for="entryno">Entry No.</label>
       <input type="number" id="entryno" name="entryno" value="">
@@ -140,7 +140,6 @@ function validate()
       <button type="reset" name="clear" class="button">Clear</button>
       </div>
     </form>
-    ?>
 
   </body>
 </html>
