@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>TrackingVetAppointmentsADD</title>
-<<<<<<< HEAD
+
     <link rel="stylesheet" type="text/css" href=".\css\VeteriarianAppointmentsADD.css"/>
     <script type="text/javascript">
 
@@ -83,9 +83,9 @@ function validate()
 
 </script>
 
-=======
+
     <link rel="stylesheet" type="text/css" href=".\css\VeteriarianAppointmentsADD.css"/>
->>>>>>> 4efac57bc12102675e4bc9830749e2a3c1d4678f
+
   </head>
   <body>
     <header>
@@ -105,7 +105,7 @@ function validate()
       </div>
 
     </header>
-    <form action=".\includes\vetappadd.php" method="post">
+    <form action="includes\vetappadd.php" method="post">
       <div class="center">
       <label for="entryno">Entry No.</label>
       <input type="number" id="entryno" name="entryno" value="">
