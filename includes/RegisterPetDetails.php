@@ -1,10 +1,16 @@
 <?php
-$con = mysqli_connect('localhost','root','','pets');
-if(!$con)
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "mypet";
+
+$conn = mysqli_connect($servername,$username,$password,$dbname);
+
+if(!$conn)
 {
 	echo'not connected to the server';
 }
-if (!mysqli_select_db($con,'pets'))
+if (mysqli_select_db($conn,'pets'))
 	{
 
 		echo'database not selected';
@@ -22,7 +28,7 @@ if (!mysqli_select_db($con,'pets'))
 
 
 $sql = "INSERT INTO registerpetdetails (`username`, `Password`, `PetName`, `PetColor`, `PetBreed`, `DOB`, `Email`, `address`) VALUES (?,?,?,?,?,?,?,?)";
-if (!mysqli_query($con,$sql))
+if (!mysqli_query($conn,$sql))
 {
 	echo 'Not Inserted';
 }
