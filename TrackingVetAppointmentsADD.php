@@ -105,6 +105,7 @@ function validate()
       </div>
 
     </header>
+    <?php
     <form action="includes/vetappadd.php" method="post">
       <div class="center">
       <label for="entryno">Entry No.</label>
@@ -139,7 +140,7 @@ function validate()
       <button type="reset" name="clear" class="button">Clear</button>
       </div>
     </form>
-
+    ?>
 
   </body>
 </html>
