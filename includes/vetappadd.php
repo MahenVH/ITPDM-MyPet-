@@ -23,6 +23,6 @@ $sql="INSERT INTO 'MyPet','VetAppointment'(
   'email')
   VALUES ('".$entry."','".$petname."','".$vetname."','".$appday."','".$apptime."','".$email."');";
 
-mysqli_close($con);
+
 header("Location:.\TrackingVetAppointmentsADD.php?upload=successfull");
  ?>
