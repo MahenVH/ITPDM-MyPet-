@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
 <head>
   <meta charset="utf-8">
-  <title></title>
+  <title>Gallery</title>
   <link rel="stylesheet" href="./css/style.css">
 
 </head>
@@ -57,17 +57,17 @@
       </div>
 
       </section>
-
-      <div class="gallery-upload">
+      <?php
+      echo '<div class="gallery-upload">
         <form action="includes/gallery-upload.php" method="post">
-        <input type="text" name="filename" placeholder="Filename.."><br>
+        <label> Name </label><input type="text" name="filename" placeholder="Filename.."><br>
         <input type="text" name="filetitle" placeholder="Image Title.."><br>
         <input type="text" name="filedesc" placeholder="Image description.."><br>
         <input type="file" name="file" ><br>
         <button type="submit" name="submit" id=submit> Submit </input>
         </form>
-      </div>
-
+      </div>';
+      ?>
     </main>
 
 

@@ -120,11 +120,11 @@ footer{
 
 .gallery-upload{
 
-  width: auto;
   text-align: center;
   text-align: center;
   display: flex;
   justify-content: center;
+
 
 
 }
@@ -144,6 +144,10 @@ input{
 
 }
 
+.label{
+  float: right;
+
+}
 #submit{
     display: flex;
     justify-content: center;
