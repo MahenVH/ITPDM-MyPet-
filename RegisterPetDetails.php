@@ -12,7 +12,7 @@ if(!mysqli_select_db($con,'pets'))
 if(isset($_POST['add'])){
 	$UserName = $_POST['UserName'];
 	$password = $_POST['password'];
-	$confirmpassword = $_POST['cpwd'];
+	$confirmpassword = $_POST('cpwd')
 	$petname = $_POST['petname'];
 	$PetColor = $_POST['PetColor'];
 	$PetBreed = $_POST['PetBreed'];
@@ -23,7 +23,11 @@ if(isset($_POST['add'])){
 
 
 
+<<<<<<< HEAD
 $sql = "INSERT INTO `registerpetdetails`(`UserName`,`password`,`cpwd`,`petname`,`PetColor`,`PetBreed`,`DOB`,`email`,`address`) VALUES (?,?,?,?,?,?,?,?,?)";
+=======
+$sql = "INSERT INTO 'registerpetdetails'('UserName','password', 'petname', 'petcolor', 'PetBreed', 'DOB', 'email', 'address') VALUES ('$UserName','$password','$petname','$PetColor','$PetBreed','$DOB','$email','$address')";
+>>>>>>> 59d1184e3afd4a218ffdfab257147abfd7dcb862
 if (!mysqli_query($con,$sql))
 {
 	echo 'Not Inserted';
