@@ -21,7 +21,7 @@ if(!$conn)
 die("cannot connect to DB server");
 }
 
-$sql="INSERT INTO vetappointment (
+$sql="INSERT INTO 'vetappointment' (
   'entry',
   'petname',
   'vetname',

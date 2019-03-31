@@ -22,11 +22,7 @@ if(!mysqli_select_db($con,'pets'))
 
 
 
-<<<<<<< HEAD
 $sql = "INSERT INTO 'registerpetdetails'('UserName','password', 'petname', 'petcolor', 'PetBreed', 'DOB', 'email', 'address') VALUES ('$UserName','$password','$petname','$PetColor','$PetBreed','$DOB','$email','$address')";
-=======
-$sql = "INSERT INTO `registerpetdetails`(`UserName`,`password`,'cpwd',`petname`,`PetColor`,`PetBreed`,`DOB`,`email`,`address`) VALUES (?,?,?,?,?,?,?,?,?)";
->>>>>>> 4276efb358e6e46201f1a02869592d5aac83bbb6
 if (!mysqli_query($con,$sql))
 {
 	echo 'Not Inserted';
