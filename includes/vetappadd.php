@@ -1,5 +1,5 @@
 <?php
-$entry=$_POST("entryno");
+$entry=$_POST['entryno'];
 $petname=$_POST("petname");
 $vetname=$_POST("vetname");
 $vetclinicname=$_POST("vetclinic");
