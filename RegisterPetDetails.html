@@ -1,44 +1,10 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+    <meta charset="utf-8">
     <title></title>
   </head>
-  <body>
-    <header>
-      <div class="TopBar">
-        <img src=".\img\catdog.png" width="250px" height="180px" align=top >
-        <nav>
-          <ul>
-            <li ><a href="HomePage.html">Home</a></li>
-            <li ><a href="Gallery.html">Gallery</a></li>
-            <li class="current"><a href="RegisterPetDetails.html">Register Your Pet</a></li>
-            <li><a href="login.html">Login</a></li>
-            <li ><a href="TrackingVetAppointments_VIEW_UPDATE_DELETE.html">View Update Delete</a></li>
-            <li><a href="TrackingVetAppointmentsADD.html">Add </a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
 
-    <form tag="Register Pet Details">
-      <link rel="stylesheet" href=".\css\PD-style.css" />
-    <div align="center">
-      <h1>Register Pet Details</h1>
-
-      Username : <input type="username" name="username" /><br/>
-      Password : <input type="password" name="pwd" /><br/>
-       Petname : <input type="Petname" name="Petname" /><br/>
-           DOB : <input type="date of birth" name="dob" /><br/>
-      <input type="radio" name="gender" value="male" checked> Male
-      <input type="radio" name="gender" value="female"> Female<br>
-         Email : <input type="email" name="email" /><br />
-      Telephone: <input type="telephone" name="tel" /><br />
-       Address : <input type="address" name="add" /><br />
-     Post Code : <input type="postcode" name="ptc" /><br />
-
-    <input type="submit" value="Submit" />
-    </div>
-  </form>
 
 <script type="text/javascript">
 
@@ -54,59 +20,95 @@
   	}
 
 
-  function validatePassword()
-  	{
-  		var pwd = document.getElementById("password").value;
-  		var cpwd = document.getElementById("confirm_password").value;
-  		if((pwd.length < 5)||( pwd != cpwd))
-  		{
-  			alert("Please enter a correct Password and enter the to Confirm password");
-  			return false;
-  		}
-  		return true;
-  	}
+    function validatePassword()
+    {
+      var password= document.getElementById("pwd").value;
+      var conpass= document.getElementById("cpwd").value;
+        var passlen = password.length;
+
+      if((passlen < 5) && (password != conpass))
+      {
+        alert("Password does not match");
+        return false;
+      }
+      return true;
+    }
 
 
-  function validateName()
-  	{
-  		var name = document.getElementById("PetName").value;
-  		if((name == "")||(name == null)|| (name (isNaN)== true))
-  		{
-  			alert("Please enter your name");
-  			return false;
-  		}
-  		return true;
-  	}
+    function validatePetName()
+    {
+    	var name = document.getElementById("petName").value;
+
+    	if(!name.match(/^[A-Za-z]+$/))
+    		{
+
+    	   alert("Please enter your pet name");
+    		return false;
+    		}
+    	return true;
+
+    }
+
+    function validateColour()
+{
+	var colour = document.getElementById("colour").value;
+	if(!colour.match(/^[A-Za-z]+$/))
+		{
+
+	   alert("Please enter your pet colour");
+		return false;
+		}
+	return true;
+}
 
 
-  function validateDateVac()
-  	{
-  		var dateString = document.getElementById("DOV").value;
-  		var myDate = new Date(dateString);
-  		var today = new Date();
-  		if(myDate > today)
-  		{
-  			alert("Please enter a correct date");
-  			return false;
-  		}
-  		return true;
-  	}
+function validateBreed()
+{
+	var breed = document.getElementById("breed").value;
+	if(!breed.match(/^[A-Za-z]+$/))
+		{
+
+	   alert("Please enter your pet breed");
+		return false;
+		}
+	return true;
+}
 
 
-  function validateEmail()
-  	 {
-  		var email = document.getElementById("email").value;
-  		var at = email.indexOf("@");
-  		var dt = email.lastIndexOf(".");
-  		var len = email.length;
+function validateDOB()
+{
+var selectedText = document.getElementById('dob').value;
+var selectedDate = new Date(selectedText);
+var now = new Date();
 
-  		if((at < 2)||(dt-at < 2)||(len-dt < 2))
-  		{
-  			alert("Please enter a valid email address");
-  			return false;
-  		}
-  		return true;
-  	  }
+if(selectedDate >= now)
+{
+alert("Please enter a valid Birth Date");
+return false;
+}
+if((dateString == "")||(dateString == null))
+{
+  alert("Please enter the date");
+  return false;
+}
+return true;
+}
+
+
+    function validateEmail()
+    {
+      var email= document.getElementById("email").value;
+      var dot = email.lastIndexOf(".");
+      var at = email.indexOf("@");
+      var len = email.length;
+
+      if((at < 1) || (dot-at < 2) || (len-dot < 3 ))
+      {
+        alert("Please enter Correct E-mail");
+        return false;
+      }
+      return true;
+    }
 
 
   function validateAddress()
@@ -121,17 +123,92 @@
   	}
 
 
-  function validatePost()
-  	{
-  		var post = document.getElementById("postcode").value;
-  		if((post == "")||(post == null)|| (name (isNaN)== false))
-  		{
-  			alert("Please enter your postcode");
-  			return false;
-  		}
-  		return true;
-  	}
+    function validate()
+    {
+       if(validateName() && validatePassword() && validatePetName() validateBreed() validateColour() && validateDOB() && validateEmail() && validateAddress() )
+      {
+        alert("Pet Details Updated");
+      }
+      else
+      {
+        event.preventDefault();
+      }
+    }
+
+
+
+
     </script>
+  </head>
+    <body>
+      <header>
+        <div class="TopBar">
+          <img src=".\img\catdog.png" width="250px" height="180px" align=top >
+          <nav>
+            <ul>
+              <li ><a href="HomePage.html">Home</a></li>
+              <li ><a href="Gallery.html">Gallery</a></li>
+              <li class="current"><a href="RegisterPetDetails.html">Register Your Pet</a></li>
+              <li><a href="login.html">Login</a></li>
+              <li ><a href="TrackingVetAppointments_VIEW_UPDATE_DELETE.html">View Update Delete</a></li>
+              <li><a href="TrackingVetAppointmentsADD.html">Add </a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <form tag="Register Pet Details">
+        <link rel="stylesheet" href=".\css\PD-style.css" />
+      <div align="center">
+        <h1>Register Pet Details</h1>
+
+
+      <div class="center">
+      <label for="Username">Username.</label>
+      <input type="text" id="userid" name="userid" value="">
+      </div>
+	<div class="center">
+      <label for="Password">Password.</label>
+      <input type="password" id="passwordid" name="passwordid" value="">
+      </div>
+      <div class="center">
+      <label for="petname">Pet Name</label>
+      <input type="text" id="petname" name="petname" value="">
+      </div>
+
+      <div class="center">
+      <label for="petcolor">Pet Color</label>
+      <input type="text" id="colorid" name="colorid" value="">
+      </div>
+
+      <div class="center">
+      <label for="petbreed">Pet Breed</label>
+      <input type="text" id="bid" name="bid" value="">
+      </div>
+
+
+      <div class="center">
+      <label for="appday">DOB</label>
+      <input type="date" id="dob" name="dob" value="">
+      </div>
+
+      <div class="center">
+      <label for="email">Email</label>
+      <input type="text" id="email" name="email" value="">
+
+      <div class="center">
+            <label for="address">Address</label>
+            <input type="text" id="addressid" name="addressid" value="">
+            </div>
+
+
+
+      </div>
+      <div>
+      <button type="submit" name="add" class="button" onclick="validate()">Add</button>
+      <button type="reset" name="clear" class="button">Clear</button>
+      </div>
+
 
 
 <footer>General web design, Copyright &copy 2018</footer>
