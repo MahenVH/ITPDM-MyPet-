@@ -29,18 +29,15 @@ if (isset($_POST['submit'])) {
   /*Types of allowed file types */
   $allowed = array("jpg", "jpeg", "png");
 
-  if (in_array($fileActualExt, $allowed)){
-    if($fileError ===0){
-      if ($fileSize < 200000000) {
-        /*Creating a unique id so that it doesnt overwrite files */
-        $imageFullName = $newFileName . "." . uniqid("",true) .".". $fileActualExt ;
-        $fileDestination = "D:\xampp\htdocs\ITPDM_Project\img" .$imageFullName;
 
-        include_once "db.php";
+$imageFullName = $newFileName . "." . uniqid("",true) .".". $fileActualExt ;
+$fileDestination = "D:\xampp\htdocs\ITPDM_Project\img" .$imageFullName;
 
-        $sql = "SELECT * FROM gallery; ";
-        /*Writing the prepared statement */
-        $stmt = mysqli_stmt_init($conn);
+include_once "db.php";
+
+$sql = "SELECT * FROM gallery; ";
+/*Writing the prepared statement */
+$stmt = mysqli_stmt_init($conn);
 
         /*If statement fails ,give error message*/
         if(!mysqli_stmt_prepare($stmt, $sql)) {
@@ -58,32 +55,11 @@ if (isset($_POST['submit'])) {
                 mysqli_stmt_bind_param($stmt, "sss",$imageTitle ,$imageDesc, $imageFullName);
                 mysqli_stmt_execute($stmt);
 
-                upload_file($fileTempName, $fileDestination);
+                move_uploaded_file($fileTempName, $fileDestination);
 
                 header("Location: ../Gallery.php?upload=successfull");
 
                     }
 
-             }
-
-      }else{
-        echo "File size too big";
-        exit();
-      }
-
-    } else {
-      echo "You had an error";
-      exit();
-    }
-
-
-  }else {
-    echo "Upload a proper file type";
-    exit();
-  }
-
-
-}
-
-
+             }}
  ?>
