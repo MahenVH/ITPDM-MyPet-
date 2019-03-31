@@ -1,11 +1,11 @@
 <?php
 $entry=$_POST['entryno'];
-$petname=$_POST("petname");
-$vetname=$_POST("vetname");
-$vetclinicname=$_POST("vetclinic");
-$appday=$_POST("appday");
-$apptime=$_POST("apptime");
-$email=$_POST("email");
+$petname=$_POST['petname'];
+$vetname=$_POST['vetname'];
+$vetclinicname=$_POST['vetclinic'];
+$appday=$_POST['appday'];
+$apptime=$_POST['apptime'];
+$email=$_POST['email'];
 
 $con=mysqli_connect("localhost","","","MyPet");
 
