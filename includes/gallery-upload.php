@@ -11,6 +11,7 @@ if (isset($_POST['submit'])) {
     /*If there are spaces in the file name,will replace them with dashes */
     $newFileName = strtolower(str_replace(" ","-",$newFileName));
   }
+
   $imageTitle = $_POST['filetitle'];
   $imageDesc = $_POST['filedesc'];
 
@@ -30,7 +31,7 @@ if (isset($_POST['submit'])) {
   $allowed = array("jpg", "jpeg", "png");
 
   $imageFullName = $newFileName . "." . uniqid("",true) .".". $fileActualExt ;
-  $fileDestination = "/img/gallery/" .$imageFullName;
+  $fileDestination = "../img/gallery/".$imageFullName;
 
   include_once "db.php";
 
@@ -51,7 +52,7 @@ if (isset($_POST['submit'])) {
         if(!mysqli_stmt_prepare($stmt, $sql)) {
           echo "SQL statement failed";
         }else {
-            mysqli_stmt_bind_param($stmt, "ssss",$imageTitle ,$imageDesc, $imageFullName, $setImageOrder);
+            mysqli_stmt_bind_param($stmt, "sss",$imageTitle ,$imageDesc, $imageFullName);
             mysqli_stmt_execute($stmt);
 
             move_uploaded_file($fileTempName, $fileDestination);

@@ -44,11 +44,11 @@
 
               while ($row = mysqli_fetch_assoc($result)){
                 echo '<a href="#">
-                  <div class="item"></div>
+                  <div class="item" style="background-image: url(img/gallery/'.$row["imgFullNameGallery"].') ;"></div>
                   <h2>'.$row["titleGallery"].'</h3>
                 </a>';
 
-              }
+                 }
             }
             ?>
         </section>
