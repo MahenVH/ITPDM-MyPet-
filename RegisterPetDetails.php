@@ -1,10 +1,20 @@
 <?php
+/*
 $con = mysqli_connect('localhost','root','','pets');
-if(!$con)
+*/
+
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "pets";
+
+$conn = mysqli_connect($servername,$username,$password,$dbname);
+
+if($conn->connect_error)
 {
 	echo'not connected to the server';
 }
-if(!mysqli_select_db($con,'pets'))
+if(!mysqli_select_db($conn,'pets'))
 	{
 
 		echo'database not selected';
@@ -12,7 +22,7 @@ if(!mysqli_select_db($con,'pets'))
 
 	$UserName = $_POST['UserName'];
 	$password = $_POST['password'];
-	$confirmpassword = $_POST('cpwd')
+	$confirmpassword = $_POST['cpwd'];
 	$petname = $_POST['petname'];
 	$PetColor = $_POST['PetColor'];
 	$PetBreed = $_POST['PetBreed'];
@@ -22,14 +32,14 @@ if(!mysqli_select_db($con,'pets'))
 
 
 
-$sql = "INSERT INTO 'registerpetdetails'('UserName','password', 'petname', 'petcolor', 'PetBreed', 'DOB', 'email', 'address') VALUES ('$UserName','$password','$petname','$PetColor','$PetBreed','$DOB','$email','$address')";
-if (!mysqli_query($con,$sql))
+$sql = "INSERT INTO registerpetdetails ('username','password', 'confirmpassword', 'petname', 'petcolor', 'petbreed', 'dob', 'email', 'address') VALUES ('$UserName','$password','$confirmpassword','$petname','$PetColor','$PetBreed','$DOB','$email','$address')";
+if ($conn->query($sql) === TRUE)
 {
-	echo 'Not Inserted';
+	echo 'Inserted';
 }
 else
 {
-	echo 'inserted';
+	echo 'Not inserted';
 }
 header("refresh:100; url=RegisterPetDetails.html");
 ?>
