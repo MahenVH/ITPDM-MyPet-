@@ -9,6 +9,7 @@ if(!mysqli_select_db($con,'pets'))
 
 		echo'database not selected';
 		}
+
 if(isset($_POST['add'])){
 	$UserName = $_POST['UserName'];
 	$password = $_POST['password'];
