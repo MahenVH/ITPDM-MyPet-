@@ -10,12 +10,15 @@
   <header>
 
     <div class="TopBar">
-      <img src="D:\ITPDM_Project\img\catdog.png" width="250px" height="180px" align=top >
+      <img src=".\img\catdog.png" width="250px" height="180px" align=top >
       <nav>
         <ul>
-          <li ><a href="index.html">Home</a></li>
+          <li ><a href="HomePage.html">Home</a></li>
           <li class="current"><a href="Gallery.html">Gallery</a></li>
-          <li><a href="services.html">Services</a></li>
+          <li><a href="RegisterPetDetails.html">Register Your Pet</a></li>
+          <li><a href="login.html">Login</a></li>
+          <li ><a href="TrackingVetAppointments_VIEW_UPDATE_DELETE.html">View Update Delete</a></li>
+          <li><a href="TrackingVetAppointmentsADD.html">Add </a></li>
         </ul>
       </nav>
     </div>
@@ -31,7 +34,7 @@
           <?php
           include_once 'includes/db.php';
 
-          $sql = "SELECT * FROM gallery ORDER BY columname "
+          $sql = "SELECT * FROM gallery "
           $stmt = mysqli_stmt_init($conn);
           if(!mysqli_stmt_prepare($stmt, $ sql)){
               echo "SQL statement failed";
@@ -45,44 +48,12 @@
 
           }
 
-          <a href="#">
+          echo '<a href="#">
             <div class="item">Hello</div>
-          </a>
-
-          <a href="#">
-            <div class="item">Hello</div>
-          </a>
-
-          <a href="#">
-            <div class="item">Hello</div>
-          </a>
-
-          <a href="#">
-            <div class="item">Hello</div>
-          </a>
-
-          <a href="#">
-            <div class="item">Hello</div>
-          </a>
-
-          <a href="#">
-            <div class="item">Hello</div>
-          </a>
-
-          <a href="#">
-            <div class="item">Hello</div>
-          </a>
-
-
-
+          </a>';
+          ?>
         </section>
       </div>
-        <?php
-
-          ?>
-
-
-
 
       </section>
       <div class="gallery-upload">
