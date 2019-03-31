@@ -27,7 +27,7 @@
 
             function validateName()
             {
-            	var name= document.getElementById("userid").value;
+            	var name= document.getElementById("UserName").value;
             	if((name == "") || (name == null))
             	{
             		alert("Please enter your First Name");
@@ -39,7 +39,7 @@
 
             function validatePwdFill()
             {
-              var name= document.getElementById("pwd").value;
+              var name= document.getElementById("password").value;
               if((name == "") || (name == null))
               {
                 alert("Please enter Password");
@@ -61,7 +61,7 @@
 
             function validatePassword()
             {
-              var password= document.getElementById("pwd").value;
+              var password= document.getElementById("password").value;
               var conpass= document.getElementById("cpwd").value;
                 var passlen = password.length;
 
@@ -86,7 +86,7 @@
 
             function validatePetColor()
             {
-              var name= document.getElementById("colorid").value;
+              var name= document.getElementById("PetColor").value;
               if((name == "") || (name == null))
               {
                 alert("Please enter Pet Color");
@@ -97,7 +97,7 @@
 
             function validateBreed()
             {
-              var name= document.getElementById("bid").value;
+              var name= document.getElementById("PetBreed").value;
               if((name == "") || (name == null))
               {
                 alert("Please enter Breed");
@@ -124,7 +124,7 @@
 
                 function validateDOB()
               {
-              	var selectedText = document.getElementById('dob').value;
+              	var selectedText = document.getElementById('DOB').value;
               	var selectedDate = new Date(selectedText);
               	var now = new Date();
 
@@ -166,16 +166,8 @@
             }
 
       </script>
-
-
-
-
-
-
     </header>
-
-
-    <form action="RegisterPetDetails.php" method="post">
+<form action="RegisterPetDetails.php" method="post">
       <link rel="stylesheet" href=".\css\PD-style.css" />
     <div align="center">
       <h1>Register Pet Details</h1>
