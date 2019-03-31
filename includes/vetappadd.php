@@ -7,7 +7,7 @@ $appday=$_POST['appday'];
 $apptime=$_POST['apptime'];
 $email=$_POST['email'];
 
-$con=mysqli_connect('localhost','root','','MyPet');
+$con=mysqli_connect('localhost','root','','mypet');
 
 if(!$con)
 {
@@ -23,6 +23,5 @@ $sql="INSERT INTO 'MyPet','VetAppointment'(
   'email')
   VALUES ('".$entry."','".$petname."','".$vetname."','".$appday."','".$apptime."','".$email."');";
 
-mysqli_close($con);
 header("Location:.\TrackingVetAppointmentsADD.php?upload=successfull");
  ?>
