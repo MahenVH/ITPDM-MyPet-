@@ -18,6 +18,157 @@
           </ul>
         </nav>
       </div>
+
+      <script type="text/javascript">
+
+
+            function validateName()
+            {
+            	var name= document.getElementById("userid").value;
+            	if((name == "") || (name == null))
+            	{
+            		alert("Please enter your First Name");
+            		return false;
+
+            	}
+            	return true;
+            }
+
+            function validatePwdFill()
+            {
+              var name= document.getElementById("pwd").value;
+              if((name == "") || (name == null))
+              {
+                alert("Please enter Password");
+                return false;
+              }
+              return true;
+            }
+
+            function validateComfirmPwd()
+            {
+              var name= document.getElementById("cpwd").value;
+              if((name == "") || (name == null))
+              {
+                alert("Please enter Confirm Password");
+                return false;
+              }
+              return true;
+            }
+
+            function validatePassword()
+            {
+              var password= document.getElementById("pwd").value;
+              var conpass= document.getElementById("cpwd").value;
+                var passlen = password.length;
+
+              if((passlen < 5) && (password != conpass))
+              {
+                alert("Password does not match");
+                return false;
+              }
+              return true;
+            }
+
+            function validatePetName()
+            {
+              var name= document.getElementById("petname").value;
+              if((name == "") || (name == null))
+              {
+                alert("Please enter Pet Name");
+                return false;
+              }
+              return true;
+            }
+
+            function validatePetColor()
+            {
+              var name= document.getElementById("colorid").value;
+              if((name == "") || (name == null))
+              {
+                alert("Please enter Pet Color");
+                return false;
+              }
+              return true;
+            }
+
+            function validateBreed()
+            {
+              var name= document.getElementById("bid").value;
+              if((name == "") || (name == null))
+              {
+                alert("Please enter Breed");
+                return false;
+              }
+              return true;
+            }
+
+            function validateEmail()
+            {
+              var email= document.getElementById("email").value;
+              var dot = email.lastIndexOf(".");
+              var at = email.indexOf("@");
+              var len = email.length;
+
+              if((at < 1) || (dot-at < 2) || (len-dot < 3 ))
+              {
+                alert("Invalid E-mail Address");
+                return false;
+              }
+              return true;
+            }
+
+
+                function validateDOB()
+              {
+              	var selectedText = document.getElementById('dob').value;
+              	var selectedDate = new Date(selectedText);
+              	var now = new Date();
+
+              	if(selectedDate >= now)
+              	{
+              		alert("Please enter a valid Birth Date");
+              		return false;
+              	}
+              	if((dateString == "")||(dateString == null))
+              		{
+              			alert("Please enter the date");
+              			return false;
+              		}
+              	 return true;
+              }
+
+
+            function validateAddress()
+            {
+              var name= document.getElementById("address").value;
+              if((name == "") || (name == null))
+              {
+                alert("Please enter Breed");
+                return false;
+              }
+              return true;
+            }
+
+            function validate()
+            {
+               if(validateName() && validatePwdFill() && validateComfirmPwd() && validatePassword() && validatePetName() && validatePetColor() && validateBreed() && validateEmail() && validateAddress() && validateDOB())
+              {
+                alert("You have registered to the site");
+              }
+              else
+              {
+                event.preventDefault();
+              }
+            }
+
+      </script>
+
+
+
+
+
+
     </header>
 
     <form tag="Register Pet Details">
@@ -32,8 +183,12 @@
       </div>
 	<div class="center">
       <label for="Password">Password.</label>
-      <input type="password" id="passwordid" name="passwordid" value="">
+      <input type="password" id="pwd" name="pwd" value="">
       </div>
+      <div class="center">
+          <label for="Password">Confirm Password.</label>
+          <input type="password" id="cpwd" name="cpwd" value="">
+          </div>
       <div class="center">
       <label for="petname">Pet Name</label>
       <input type="text" id="petname" name="petname" value="">
@@ -57,6 +212,12 @@
       <div class="center">
       <label for="email">Email</label>
       <input type="text" id="email" name="email" value="">
+
+      <div class="center">
+      <label for="email">address</label>
+      <input type="text" id="address" name="address" value="">
+
+
       </div>
       <div>
       <button type="submit" name="add" class="button" onclick="validate()">Add</button>
@@ -65,11 +226,12 @@
     </form>
 
 
-<script type="text/javascript">
 
-  function validateName()
+ <script type="">
+
+/*  function validateName()
   	{
-  		var name = document.getElementById("UName").value;
+  		var name = document.getElementById("userid").value;
   		if((name == "")||(name == null)|| (name (isNaN)== true))
   		{
   			alert("Please enter your name");
@@ -106,13 +268,13 @@
 
   }
 
-  function validateColour()
+  function validateColor()
 {
-	var colour = document.getElementById("colour").value;
+	var colorid = document.getElementById("colorid").value;
 	if(!colour.match(/^[A-Za-z]+$/))
 		{
 
-	   alert("Please enter your pet colour");
+	   alert("Please enter your pet color");
 		return false;
 		}
 	return true;
@@ -120,8 +282,8 @@
 
 function validateBreed()
 {
-	var breed = document.getElementById("breed").value;
-	if(!breed.match(/^[A-Za-z]+$/))
+	var bid = document.getElementById("bid").value;
+	if(!bid.match(/^[A-Za-z]+$/))
 		{
 
 	   alert("Please enter your pet breed");
@@ -133,7 +295,7 @@ function validateBreed()
 
     function validateDOB()
   {
-  	var selectedText = document.getElementById('dob').value;
+  	var selectedText = document.getElementById('DOB').value;
   	var selectedDate = new Date(selectedText);
   	var now = new Date();
 
@@ -180,7 +342,7 @@ function validateBreed()
 
     function validate()
     	{
-    		if(validateName()  && validatePassword() && validatePetName() && validateColour() validateBreed() validateDOB() validateEmail())
+    		if(validateName()  && validatePassword() && validatePetName() && validateColour() validateBreed() validateDOB() validateEmail() validateAddress())
     			{
     				alert("Pet registration is completed");
     			}
@@ -188,7 +350,7 @@ function validateBreed()
     			{
     				even.preventDefault();
     			}
-    	}
+    	}*/
 
     </script>
 
