@@ -10,18 +10,18 @@ if(!mysqli_select_db($con,'pets'))
 		echo'database not selected';
 		}
 
-	$UserName = $_POST['userid'];
-	$password = $_POST['pwd'];
-	$PetName = $_POST['petname'];
-	$PetColor = $_POST['colorid'];
-	$PetBreed = $_POST['bid'];
-	$DOB = $_POST['dob'];
+	$UserName = $_POST['UserName'];
+	$password = $_POST['password'];
+	$petname = $_POST['petname'];
+	$PetColor = $_POST['PetColor'];
+	$PetBreed = $_POST['PetBreed'];
+	$DOB = $_POST['DOB'];
 	$email = $_POST['email'];
-	$address= $_POST['add'];
+	$address= $_POST['address'];
 
 
 
-$sql = "INSERT INTO `registerpetdetails`(`Username`, `Password`, `Pet Name`, `Pet Color`, `Pet Breed`, `DOB`, `Email`, `Address`) VALUES ('$UserName'),('$password'),`$PetName`,`$PetColor`,`$PetBreed`,'$DOB','$email','$Address')";
+$sql = "INSERT INTO `registerpetdetails`(`UserName`, `password`, `petname`, `petcolor`, `PetBreed`, `DOB`, `email`, `address`) VALUES ('$UserName','$password',`$petname`,`$PetColor`,`$PetBreed`,'$DOB','$email','$address')";
 if (!mysqli_query($con,$sql))
 {
 	echo 'Not Inserted';

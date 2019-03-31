@@ -11,8 +11,8 @@
         <nav>
           <ul>
             <li ><a href="HomePage.html">Home</a></li>
-            <li ><a href="Gallery.php">Gallery</a></li>
-            <li class="current"><a href="RegisterPetDetails.html">RegisterPet</a></li>
+            <li class="current"><a href="Gallery.php">Gallery</a></li>
+            <li><a href="RegisterPetDetails.html">RegisterPet</a></li>
             <li><a href="login.html">Login</a></li>
             <li ><a href="TrackingVetAppointments_VIEW_UPDATE_DELETE.html">Modify</a></li>
             <li><a href="TrackingVetAppointmentsADD.html">Add </a></li>
@@ -182,15 +182,15 @@
 
       <form >
       <div class="center">
-      <label for="Username">Username.</label>
+      <label for="Username">Username</label>
       <input type="text" id="UserName" name="UserName" value="">
       </div>
 	<div class="center">
-      <label for="Password">Password.</label>
+      <label for="Password">Password</label>
       <input type="password" id="password" name="password" value="">
       </div>
       <div class="center">
-          <label for="Password">Confirm Password.</label>
+          <label for="Password">Confirm Password</label>
           <input type="password" id="cpwd" name="cpwd" value="">
           </div>
       <div class="center">
@@ -222,6 +222,7 @@
       <input type="text" id="address" name="address" value="">
 
 
+
       </div>
       <div>
       <button type="submit" name="add" class="button" onclick="validate()">Add</button>
@@ -235,128 +236,7 @@
 
  <script type="">
 
-/*  function validateName()
-  	{
-  		var name = document.getElementById("userid").value;
-  		if((name == "")||(name == null)|| (name (isNaN)== true))
-  		{
-  			alert("Please enter your name");
-  			return false;
-  		}
-  		return true;
-  	}
 
-
-  function validatePassword()
-  	{
-  		var pwd = document.getElementById("password").value;
-  		var cpwd = document.getElementById("confirm_password").value;
-  		if((pwd.length < 5)||( pwd != cpwd))
-  		{
-  			alert("Please enter a correct Password and enter the to Confirm password");
-  			return false;
-  		}
-  		return true;
-  	}
-
-
-    function validatePetName()
-  {
-  	var name = document.getElementById("petName").value;
-
-  	if(!name.match(/^[A-Za-z]+$/))
-  		{
-
-  	   alert("Please enter your pet name");
-  		return false;
-  		}
-  	return true;
-
-  }
-
-  function validateColor()
-{
-	var colorid = document.getElementById("colorid").value;
-	if(!colour.match(/^[A-Za-z]+$/))
-		{
-
-	   alert("Please enter your pet color");
-		return false;
-		}
-	return true;
-}
-
-function validateBreed()
-{
-	var bid = document.getElementById("bid").value;
-	if(!bid.match(/^[A-Za-z]+$/))
-		{
-
-	   alert("Please enter your pet breed");
-		return false;
-		}
-	return true;
-}
-
-
-    function validateDOB()
-  {
-  	var selectedText = document.getElementById('DOB').value;
-  	var selectedDate = new Date(selectedText);
-  	var now = new Date();
-
-  	if(selectedDate >= now)
-  	{
-  		alert("Please enter a valid Birth Date");
-  		return false;
-  	}
-  	if((dateString == "")||(dateString == null))
-  		{
-  			alert("Please enter the date");
-  			return false;
-  		}
-  	 return true;
-  }
-
-
-  function validateEmail()
-  	 {
-  		var email = document.getElementById("email").value;
-  		var at = email.indexOf("@");
-  		var dt = email.lastIndexOf(".");
-  		var len = email.length;
-
-  		if((at < 2)||(dt-at < 2)||(len-dt < 2))
-  		{
-  			alert("Please enter a valid email address");
-  			return false;
-  		}
-  		return true;
-  	  }
-
-
-  function validateAddress()
-  	{
-  		var add = document.getElementById("address").value;
-  		if((add == "")||(add == null))
-  		{
-  			alert("Please enter your address");
-  			return false;
-  		}
-  		return true;
-  	}
-
-    function validate()
-    	{
-    		if(validateName()  && validatePassword() && validatePetName() && validateColour() validateBreed() validateDOB() validateEmail() validateAddress())
-    			{
-    				alert("Pet registration is completed");
-    			}
-    		else
-    			{
-    				even.preventDefault();
-    			}
-    	}*/
 
     </script>
 
