@@ -9,13 +9,41 @@
 
       function email()
       {
-      	var name= document.getElementById("uid").value;
-      	if((name == "") || (name == null))
-      	{
-      		alert("Please enter your email address");
-      		return false;
-      	}
-      	return true;
+        var email= document.getElementById("uid").value;
+        if((email == "") || (email == null))
+        {
+          alert("Please enter your E-mail");
+
+        }
+        else   {
+            var email= document.getElementById("uid").value;
+            var dot = email.lastIndexOf(".");
+            var at = email.indexOf("@");
+            var len = email.length;
+
+            if((at < 1) || (dot-at < 2) || (len-dot < 3 ))
+            {
+              alert("Please enter Correct E-mail");
+              return false;
+            }
+            return true;
+          }
+
+      }
+
+      function emailFormat()
+      {
+        var email= document.getElementById("uid").value;
+        var dot = email.lastIndexOf(".");
+        var at = email.indexOf("@");
+        var len = email.length;
+
+        if((at < 1) || (dot-at < 2) || (len-dot < 3 ))
+        {
+          alert("Please enter Correct E-mail");
+          return false;
+        }
+        return true;
       }
 
       function password()
@@ -31,7 +59,7 @@
 
       function validate()
       {
-       	 if(email() && password())
+       	 if(email() && password()&& emailFormat())
       	{
       		alert("Login Sucessfull ");
       	}
@@ -52,7 +80,7 @@
             <li ><a href="HomePage.html">Home</a></li>
             <li ><a href="Gallery.html">Gallery</a></li>
             <li><a href="RegisterPetDetails.html">Register Your Pet</a></li>
-            <li class="current"><a href="login">Login</a></li>
+            <li class="login.htlm"><a href="login">Login</a></li>
             <li ><a href="TrackingVetAppointments_VIEW_UPDATE_DELETE.html">View Update Delete</a></li>
             <li><a href="TrackingVetAppointmentsADD.html">Add </a></li>
           </ul>
