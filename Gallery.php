@@ -14,10 +14,10 @@
       <nav>
         <ul>
           <li ><a href="HomePage.html">Home</a></li>
-          <li class="current"><a href="Gallery.html">Gallery</a></li>
-          <li><a href="RegisterPetDetails.html">Register Your Pet</a></li>
+          <li class="current"><a href="Gallery.php">Gallery</a></li>
+          <li><a href="RegisterPetDetails.html">RegisterPet</a></li>
           <li><a href="login.html">Login</a></li>
-          <li ><a href="TrackingVetAppointments_VIEW_UPDATE_DELETE.html">View Update Delete</a></li>
+          <li ><a href="TrackingVetAppointments_VIEW_UPDATE_DELETE.html">Modify</a></li>
           <li><a href="TrackingVetAppointmentsADD.html">Add </a></li>
         </ul>
       </nav>
@@ -32,34 +32,32 @@
 
         <section class="gallery-container">
           <?php
-          include_once 'includes/db.php';
+            include_once "includes/db.php";
 
-          $sql = "SELECT * FROM gallery "
-          $stmt = mysqli_stmt_init($conn);
-          if(!mysqli_stmt_prepare($stmt, $ sql)){
-              echo "SQL statement failed";
+            $sql = "SELECT * FROM gallery ORDER BY idGallery DESC";
+            $stmt = mysqli_stmt_init($conn);
+            if(!mysqli_stmt_prepare($stmt, $sql)){
+                echo "SQL statement failed";
 
 
-          }else{
-            mysqli_stmt_execute($stmt);
-            $result = mysqli_stmt_getresult($stmt);
+            }else{
+              mysqli_stmt_execute($stmt);
+              $result = mysqli_stmt_get_result($stmt);
 
-            while ($row = mysqli_fetch_assoc($result)){
-              echo '<a href="#">
-                <div class="item">Hello</div>
-                <h2>".$row["titleGallery"]"
-              </a>';
+              while ($row = mysqli_fetch_assoc($result)){
+                echo '<a href="#">
+                  <div class="item">Hello</div>
+                  <h2>".$row["titleGallery"]"
+                </a>';
 
+              }
             }
-
-          }
-
-
-          ?>
+            ?>
         </section>
       </div>
 
       </section>
+
       <div class="gallery-upload">
         <form action="includes/gallery-upload.php" method="post">
         <input type="text" name="filename" placeholder="Filename.."><br>
@@ -69,6 +67,7 @@
         <button type="submit" name="submit" id=submit> Submit </input>
         </form>
       </div>
+
     </main>
 
 

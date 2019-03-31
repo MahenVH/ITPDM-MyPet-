@@ -33,7 +33,7 @@ if (isset($_POST['submit'])) {
       if ($fileSize < 20000) {
         /*Creating a unique id so that it doesnt overwrite files */
         $imageFullName = $newFileName . "." . uniqid("",true) .".". $fileActualExt ;
-        $fileDestination = "../img/gallery/" .$imageFullName;
+        $fileDestination = "D:\xampp\htdocs\ITPDM_Project\img" .$imageFullName;
 
         include_once "db.php";
 
@@ -45,25 +45,25 @@ if (isset($_POST['submit'])) {
         if(!mysqli_stmt_prepare($stmt, $sql)) {
           echo "SQL statement failed";
         }else {
-            mysqli_stmt_execute($stmt);
-            $result = mysqli_stmt_getresult($stmt);
-            $rowcount = mysqli_num_rows($result);
-            $setImageOrder = $rowcount +1;
-
-            $sql = "INSERT INTO gallery (titleGallery, descGallery, imgFullNameGallery) VALUES(?, ? , ?);";
-            if(!mysqli_stmt_prepare($stmt, $sql)) {
-              echo "SQL statement failed";
-            }else {
-              mysqli_stmt_bind_param($stmt, "sss",$imageTitle ,$imageDesc, $imageFullName);
               mysqli_stmt_execute($stmt);
+              $result = mysqli_stmt_get_result($stmt);
+              $rowcount = mysqli_num_rows($result);
+              $setImageOrder = $rowcount +1;
 
-              upload_file($fileTempName, $fileDestination);
+              $sql = "INSERT INTO gallery (titleGallery, descGallery, imgFullNameGallery) VALUES(?, ? , ?);";
+              if(!mysqli_stmt_prepare($stmt, $sql)) {
+                echo "SQL statement failed";
+              }else {
+                mysqli_stmt_bind_param($stmt, "sss",$imageTitle ,$imageDesc, $imageFullName);
+                mysqli_stmt_execute($stmt);
 
-              header("Location: ../Gallery.php?Upload=successfull");
+                upload_file($fileTempName, $fileDestination);
 
-            }
+                header("Location: ../Gallery.php?upload=successfull");
 
-        }
+                    }
+
+             }
 
       }else{
         echo "File size too big";
