@@ -7,7 +7,7 @@ $appday=$_POST['appday'];
 $apptime=$_POST['apptime'];
 $email=$_POST['email'];
 
-$con=mysqli_connect("localhost","","","MyPet");
+$con=mysqli_connect("localhost","root","","MyPet");
 
 if(!$con)
 {
