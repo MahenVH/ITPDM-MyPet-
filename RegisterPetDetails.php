@@ -35,10 +35,15 @@ if(isset($_POST['add'])){
 
 
 
+<<<<<<< HEAD
 
 $sql = "INSERT INTO registerpetdetails ('username','password', 'confirmpassword', 'petname', 'petcolor', 'petbreed', 'dob', 'email', 'address') VALUES ('$UserName','$password','$confirmpassword','$petname','$PetColor','$PetBreed','$DOB','$email','$address')";
 if ($conn->query($sql) === TRUE)
 
+=======
+$sql = "INSERT INTO registerpetdetails('UserName','password', 'petname', 'petcolor', 'PetBreed', 'DOB', 'email', 'address') VALUES (?,?,?,?,?,?,?,?)";
+if (!mysqli_query($con,$sql))
+>>>>>>> e9c2cdecbc16d42f56ef6835a2dc73ca48b1b588
 {
 	echo 'Inserted';
 }
