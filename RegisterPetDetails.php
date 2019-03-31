@@ -12,7 +12,7 @@ if(!mysqli_select_db($con,'pets'))
 if(isset($_POST['add'])){
 	$UserName = $_POST['UserName'];
 	$password = $_POST['password'];
-	$confirmpassword = $_POST('cpwd')
+	$confirmpassword = $_POST['cpwd'];
 	$petname = $_POST['petname'];
 	$PetColor = $_POST['PetColor'];
 	$PetBreed = $_POST['PetBreed'];
