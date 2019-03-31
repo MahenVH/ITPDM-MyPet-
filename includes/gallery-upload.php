@@ -29,37 +29,36 @@ if (isset($_POST['submit'])) {
   /*Types of allowed file types */
   $allowed = array("jpg", "jpeg", "png");
 
+  $imageFullName = $newFileName . "." . uniqid("",true) .".". $fileActualExt ;
+  $fileDestination = "/img/gallery/" .$imageFullName;
 
-$imageFullName = $newFileName . "." . uniqid("",true) .".". $fileActualExt ;
-$fileDestination = "D:\xampp\htdocs\ITPDM_Project\img" .$imageFullName;
+  include_once "db.php";
 
-include_once "db.php";
+  $sql = "SELECT * FROM gallery; ";
+  /*Writing the prepared statement */
+  $stmt = mysqli_stmt_init($conn);
 
-$sql = "SELECT * FROM gallery; ";
-/*Writing the prepared statement */
-$stmt = mysqli_stmt_init($conn);
+  /*If statement fails ,give error message*/
+  if(!mysqli_stmt_prepare($stmt, $sql)) {
+    echo "SQL statement failed";
+  }else {
+        mysqli_stmt_execute($stmt);
+        $result = mysqli_stmt_get_result($stmt);
+        $rowcount = mysqli_num_rows($result);
+        $setImageOrder = $rowcount +1;
 
-        /*If statement fails ,give error message*/
+        $sql = "INSERT INTO gallery (titleGallery, descGallery, imgFullNameGallery) VALUES(?, ?, ?);";
         if(!mysqli_stmt_prepare($stmt, $sql)) {
           echo "SQL statement failed";
         }else {
-              mysqli_stmt_execute($stmt);
-              $result = mysqli_stmt_get_result($stmt);
-              $rowcount = mysqli_num_rows($result);
-              $setImageOrder = $rowcount +1;
+            mysqli_stmt_bind_param($stmt, "ssss",$imageTitle ,$imageDesc, $imageFullName, $setImageOrder);
+            mysqli_stmt_execute($stmt);
 
-              $sql = "INSERT INTO gallery (titleGallery, descGallery, imgFullNameGallery) VALUES(?, ? , ?);";
-              if(!mysqli_stmt_prepare($stmt, $sql)) {
-                echo "SQL statement failed";
-              }else {
-                mysqli_stmt_bind_param($stmt, "sss",$imageTitle ,$imageDesc, $imageFullName);
-                mysqli_stmt_execute($stmt);
+            move_uploaded_file($fileTempName, $fileDestination);
 
-                move_uploaded_file($fileTempName, $fileDestination);
+            header("Location: ../Gallery.php?upload=successfull");
+              }
 
-                header("Location: ../Gallery.php?upload=successfull");
-
-                    }
-
-             }}
+        }
+}
  ?>

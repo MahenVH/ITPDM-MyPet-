@@ -9,19 +9,6 @@ body{
   background-color: #2F514E;
 }
 
-ul{
-  margin: 0;
-  padding: 0;
-}
-
-li{
-
- float: left;
- display: inline;
- padding: 0 20px 0 20px;
-}
-
-
 h2{
   margin-left: 222px;
   text-align: left;
@@ -58,9 +45,24 @@ header{
 header nav{
   float: right;
   margin-top: 70px;
-  width: 500px;
+  width: 700px;
+  padding : 5px;
 
 }
+
+
+ul{
+  margin: 0;
+  padding: 0;
+}
+
+li{
+
+ float: left;
+ display: inline;
+ padding: 0 5px 0 30px;
+}
+
 
 header a{
   color: #2F514E;
@@ -71,7 +73,7 @@ header a{
 
 header a:hover{
   color: #cccccc;
-  font-weight: bold;
+
 }
 
 footer{
@@ -85,7 +87,6 @@ footer{
   width: 100%;
 
 }
-
 /*Only for this page */
 
 
@@ -97,19 +98,6 @@ footer{
   text-align: center;
 }
 
-
-
-ul{
-  margin: 0;
-  padding: 0;
-}
-
-li{
-
- float: left;
- display: inline;
- padding: 0 20px 0 20px;
-}
 
 
 /*slideshow*/
