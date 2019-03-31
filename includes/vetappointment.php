@@ -5,11 +5,11 @@ $username = "root";
 $password = "";
 $dbname = "mypet";
 
-$conn = mysqli_connnect($servername,$username,$password,$dbname);
+$conn = mysqli_connect($servername,$username,$password,$dbname);
 
 
 if (!$conn) {
-  echo "Not connnected to server";
+  echo "Not connected to server";
 }
 if (mysqli_select_db($conn,'mypet')) {
   echo "Databse not selected";
@@ -32,5 +32,5 @@ else {
   echo "inserted";
 }
 
-  header("Location: TrackingVetAppointmentsADD.php");
+  header("Location: ../TrackingVetAppointmentsADD.php");
  ?>
