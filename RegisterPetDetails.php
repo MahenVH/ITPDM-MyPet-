@@ -10,7 +10,7 @@ if(!mysqli_select_db($con,'pets'))
 		echo'database not selected';
 		}
 
-	$UserName = $_POST['username'];
+	$UserName = $_POST['UserName'];
 	$password = $_POST['password'];
 	$petname = $_POST['petname'];
 	$PetColor = $_POST['PetColor'];
@@ -21,7 +21,7 @@ if(!mysqli_select_db($con,'pets'))
 
 
 
-$sql = "INSERT INTO `registerpetdetails`(`username`, `password`, `petname`, `petcolor`, `PetBreed`, `DOB`, `email`, `address`) VALUES ('$UserName','$password',`$petname`,`$PetColor`,`$PetBreed`,'$DOB','$email','$address')";
+$sql = "INSERT INTO `registerpetdetails`(`UserName`, `password`, `petname`, `petcolor`, `PetBreed`, `DOB`, `email`, `address`) VALUES ('$UserName','$password',`$petname`,`$PetColor`,`$PetBreed`,'$DOB','$email','$address')";
 if (!mysqli_query($con,$sql))
 {
 	echo 'Not Inserted';
