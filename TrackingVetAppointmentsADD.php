@@ -95,11 +95,11 @@ function validate()
         <nav>
           <ul>
             <li ><a href="HomePage.html">Home</a></li>
-            <li class="current"><a href="Gallery.html">Gallery</a></li>
-            <li><a href="RegisterPetDetails.html">Register Your Pet</a></li>
+            <li class="current"><a href="Gallery.php">Gallery</a></li>
+            <li><a href="RegisterPetDetails.html">RegisterPet</a></li>
             <li><a href="login.html">Login</a></li>
-            <li ><a href="TrackingVetAppointments_VIEW_UPDATE_DELETE.html">View Update Delete</a></li>
-            <li class=current><a href="TrackingVetAppointmentsADD.html">Add </a></li>
+            <li ><a href="TrackingVetAppointments_VIEW_UPDATE_DELETE.html">Modify</a></li>
+            <li><a href="TrackingVetAppointmentsADD.php">Add </a></li>
           </ul>
         </nav>
       </div>
