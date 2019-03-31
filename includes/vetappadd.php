@@ -30,6 +30,11 @@ $sql="INSERT INTO 'vetappointment' (
   'email')
   VALUES ('".$entry."','".$petname."','".$vetname."','".$appday."','".$apptime."','".$email."');";
 
+<<<<<<< HEAD
+
+header("Location:.\TrackingVetAppointmentsADD.php?upload=successfull");
+=======
 header("Location:../TrackingVetAppointmentsADD.php");
 
+>>>>>>> dca1e5387e2444aac53656e2d52095bcfbeee4ad
  ?>
