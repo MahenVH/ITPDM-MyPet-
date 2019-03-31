@@ -44,7 +44,7 @@
 
               while ($row = mysqli_fetch_assoc($result)){
                 echo '<a href="#">
-                  <div class="item">Hello</div>
+                  <div class="item"></div>
                   <h2>'.$row["titleGallery"].'</h3>
                 </a>';
 
