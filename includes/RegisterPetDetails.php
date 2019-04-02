@@ -1,19 +1,40 @@
 <?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "mypet";
 
-$UserName = $_POST["usernameName"];
-//$UserName = $_POST["username"];
-$password = $_POST["pwd"];
-$PetName = $_POST["Petname"];
-$Petcolor = $_POST["Petcolor"]
-$PetBreed = $_POST["PetBreed"]
-$dob = $_POST["dob"];
-$email = $_POST["email"];
-$address= $_POST["add"];
+$conn = mysqli_connect($servername,$username,$password,$dbname);
 
-
-
-$con = mysqli_connect("localhost","root","","UpdatePetDetails");
-	if(!$con)
+if(!$conn)
+{
+	echo'not connected to the server';
+}
+if (mysqli_select_db($conn,'pets'))
 	{
-		die("Cannot connect to DB server");
-	}
+
+		echo'database not selected';
+		}
+
+		$UserName = $_POST['UserName'];
+		$password = $_POST['password'];
+		$PetName = $_POST['petname'];
+		$PetColor = $_POST['PetColor'];
+		$PetBreed = $_POST['PetBreed'];
+		$DOB = $_POST['DOB'];
+		$email = $_POST['email'];
+		$address= $_POST['address'];
+
+
+
+$sql = "INSERT INTO registerpetdetails (`username`, `Password`, `PetName`, `PetColor`, `PetBreed`, `DOB`, `Email`, `address`) VALUES (?,?,?,?,?,?,?,?)";
+if (!mysqli_query($conn,$sql))
+{
+	echo 'Not Inserted';
+}
+else
+{
+	echo 'inserted';
+}
+header("refresh:100; url=RegisterPetDetails.html");
+?>

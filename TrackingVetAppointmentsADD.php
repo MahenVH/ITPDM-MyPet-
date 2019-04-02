@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>TrackingVetAppointmentsADD</title>
-<<<<<<< HEAD
+
     <link rel="stylesheet" type="text/css" href=".\css\VeteriarianAppointmentsADD.css"/>
     <script type="text/javascript">
 
@@ -83,9 +83,9 @@ function validate()
 
 </script>
 
-=======
+
     <link rel="stylesheet" type="text/css" href=".\css\VeteriarianAppointmentsADD.css"/>
->>>>>>> 4efac57bc12102675e4bc9830749e2a3c1d4678f
+
   </head>
   <body>
     <header>
@@ -95,17 +95,18 @@ function validate()
         <nav>
           <ul>
             <li ><a href="HomePage.html">Home</a></li>
-            <li class="current"><a href="Gallery.html">Gallery</a></li>
-            <li><a href="RegisterPetDetails.html">Register Your Pet</a></li>
+            <li class="current"><a href="Gallery.php">Gallery</a></li>
+            <li><a href="RegisterPetDetails.html">RegisterPet</a></li>
             <li><a href="login.html">Login</a></li>
-            <li ><a href="TrackingVetAppointments_VIEW_UPDATE_DELETE.html">View Update Delete</a></li>
-            <li class=current><a href="TrackingVetAppointmentsADD.html">Add </a></li>
+            <li ><a href="TrackingVetAppointments_VIEW_UPDATE_DELETE.html">Modify</a></li>
+            <li><a href="TrackingVetAppointmentsADD.php">Add </a></li>
           </ul>
         </nav>
       </div>
 
     </header>
-    <form >
+
+    <form action=".\includes\vetappointment.php" method="post">
       <div class="center">
       <label for="entryno">Entry No.</label>
       <input type="number" id="entryno" name="entryno" value="">
@@ -139,7 +140,6 @@ function validate()
       <button type="reset" name="clear" class="button">Clear</button>
       </div>
     </form>
-
 
   </body>
 </html>
