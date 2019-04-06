@@ -1,3 +1,5 @@
+<?php session_start() ?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -104,30 +106,30 @@
 
         <nav>
           <ul>
-            <li ><a href="HomePage.html">Home</a></li>
+            <li ><a href="HomePage.php">Home</a></li>
             <li class="current"><a href="Gallery.html">Gallery</a></li>
             <li><a href="RegisterPetDetails.html">Register Your Pet</a></li>
-            <li><a href="login.html">Login</a></li>
+            <li><a href="login.php">Login</a></li>
             <li ><a href="TrackingVetAppointments_VIEW_UPDATE_DELETE.html">View Update Delete</a></li>
             <li><a href="TrackingVetAppointmentsADD.html">Add </a></li>
           </ul>
         </nav>
-        
+
       </div>
     </header>
 <main>
   <section>
 
   <div class="signup" >
-    <form action=".\singup.php" method="post">
+    <form action=".\includes\signup.php" method="post" >
         <h1>Signup Page</h1>
       <input type="text" name="fname" id="fname" placeholder="First Name">
      <input type="text" name="lname" id="lname" placeholder="Last Name">
      <input type="text" name="email" id="email" placeholder="E-mail">
      <input type="password" name="pwd" id="pwd" placeholder="Password">
-     <input type="password" name="confirmpwd" id="cpwd" placeholder="Confirm Password">
+     <input type="password" name="cpwd" id="cpwd" placeholder="Confirm Password">
      <button type="submit" name="submit" onclick="validate()">Sing up</button>
-     if you already have an account   <a href="login.html">Login</a>
+     if you already have an account   <a href="login.php">Login</a>
     </form>
 
    </div>
