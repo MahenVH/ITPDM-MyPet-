@@ -79,19 +79,19 @@
 
 
           function validateEmail()
-            {
-              var email= document.getElementById("email").value;
-              var dot = email.lastIndexOf(".");
-              var at = email.indexOf("@");
-              var len = email.length;
+          {
+          	var email = document.getElementById("email").value;
+          	var dot = email.lastIndexOf(".");
+          	var at = email.indexOf("@");
+          	var len = email.length;
 
-              if((at < 1) || (dot-at < 2) || (len-dot < 3 ))
-              {
-                alert("Invalid E-mail Address");
-                return false;
-              }
-              return true;
-            }
+          		if((at < 1) || (dot-at <2) || (len-dot <3 ))
+          		{
+          			alert("Please enter a valid Email");
+          			return false;
+          		}
+          		return true;
+          }
 
 
                 function validateAddress()
