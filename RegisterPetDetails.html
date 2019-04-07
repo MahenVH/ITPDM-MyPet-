@@ -27,7 +27,7 @@
 
             function validateName()
             {
-            	var name= document.getElementById("userid").value;
+            	var name= document.getElementById("UserName").value;
             	if((name == "") || (name == null))
             	{
             		alert("Please enter your First Name");
@@ -39,7 +39,7 @@
 
             function validatePwdFill()
             {
-              var name= document.getElementById("pwd").value;
+              var name= document.getElementById("password").value;
               if((name == "") || (name == null))
               {
                 alert("Please enter Password");
@@ -86,7 +86,7 @@
 
             function validatePetColor()
             {
-              var name= document.getElementById("colorid").value;
+              var name= document.getElementById("PetColor").value;
               if((name == "") || (name == null))
               {
                 alert("Please enter Pet Color");
@@ -97,7 +97,7 @@
 
             function validateBreed()
             {
-              var name= document.getElementById("bid").value;
+              var name= document.getElementById("PetBreed").value;
               if((name == "") || (name == null))
               {
                 alert("Please enter Breed");
@@ -106,7 +106,27 @@
               return true;
             }
 
-            function validateEmail()
+            function validateDOB()
+          {
+            var selectedText = document.getElementById('DOB').value;
+            var selectedDate = new Date(selectedText);
+            var now = new Date();
+
+            if(selectedDate >= now)
+            {
+              alert("Please enter a valid Birth Date");
+              return false;
+            }
+            if((dateString == "")||(dateString == null))
+              {
+                alert("Please enter the date");
+                return false;
+              }
+             return true;
+          }
+
+
+          function validateEmail()
             {
               var email= document.getElementById("email").value;
               var dot = email.lastIndexOf(".");
@@ -122,27 +142,7 @@
             }
 
 
-                function validateDOB()
-              {
-              	var selectedText = document.getElementById('dob').value;
-              	var selectedDate = new Date(selectedText);
-              	var now = new Date();
-
-              	if(selectedDate >= now)
-              	{
-              		alert("Please enter a valid Birth Date");
-              		return false;
-              	}
-              	if((dateString == "")||(dateString == null))
-              		{
-              			alert("Please enter the date");
-              			return false;
-              		}
-              	 return true;
-              }
-
-
-            function validateAddress()
+                function validateAddress()
             {
               var name= document.getElementById("address").value;
               if((name == "") || (name == null))
@@ -155,7 +155,7 @@
 
             function validate()
             {
-               if(validateName() && validatePwdFill() && validateComfirmPwd() && validatePassword() && validatePetName() && validatePetColor() && validateBreed() && validateEmail() && validateAddress() && validateDOB())
+               if(validateName() && validatePwdFill() && validateComfirmPwd() && validatePassword() && validatePetName() && validatePetColor() && validateBreed() && validateDOB() && validateEmail() && validateAddress())
               {
                 alert("You have registered to the site");
               }
