@@ -25,54 +25,6 @@
       <script type="text/javascript">
 
 
-            function validateName()
-            {
-            	var name= document.getElementById("UserName").value;
-            	if((name == "") || (name == null))
-            	{
-            		alert("Please enter your First Name");
-            		return false;
-
-            	}
-            	return true;
-            }
-
-            function validatePwdFill()
-            {
-              var name= document.getElementById("password").value;
-              if((name == "") || (name == null))
-              {
-                alert("Please enter Password");
-                return false;
-              }
-              return true;
-            }
-
-            function validateComfirmPwd()
-            {
-              var name= document.getElementById("cpwd").value;
-              if((name == "") || (name == null))
-              {
-                alert("Please enter Confirm Password");
-                return false;
-              }
-              return true;
-            }
-
-            function validatePassword()
-            {
-              var password= document.getElementById("pwd").value;
-              var conpass= document.getElementById("cpwd").value;
-                var passlen = password.length;
-
-              if((passlen < 5) && (password != conpass))
-              {
-                alert("Password does not match");
-                return false;
-              }
-              return true;
-            }
-
             function validatePetName()
             {
               var name= document.getElementById("petname").value;
@@ -155,7 +107,7 @@
 
             function validate()
             {
-               if(validateName() && validatePwdFill() && validateComfirmPwd() && validatePassword() && validatePetName() && validatePetColor() && validateBreed() && validateDOB() && validateEmail() && validateAddress())
+               if( validatePassword() && validatePetName() && validatePetColor() && validateBreed() && validateDOB() && validateEmail() && validateAddress())
               {
                 alert("You have registered to the site");
               }
@@ -181,18 +133,6 @@
       <h1>Register Pet Details</h1>
 
       <form >
-      <div class="center">
-      <label for="Username">Username</label>
-      <input type="text" id="UserName" name="UserName" value="">
-      </div>
-	<div class="center">
-      <label for="Password">Password</label>
-      <input type="password" id="password" name="password" value="">
-      </div>
-      <div class="center">
-          <label for="Password">Confirm Password</label>
-          <input type="password" id="cpwd" name="cpwd" value="">
-          </div>
       <div class="center">
       <label for="petname">Pet Name</label>
       <input type="text" id="petname" name="petname" value="">
