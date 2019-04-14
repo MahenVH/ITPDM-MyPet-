@@ -17,7 +17,7 @@
             <li ><a href="HomePage.html">Home</a></li>
             <li ><a href="Gallery.php">Gallery</a></li>
             <li><a href="RegisterPetDetails.html">RegisterPet</a></li>
-            <li class="current"><a href="login.html">Login</a></li>
+            <li class="current"><a href="login.php">Login</a></li>
             <li ><a href="TrackingVetAppointments_VIEW_UPDATE_DELETE.html">Modify</a></li>
             <li><a href="TrackingVetAppointmentsADD.php">Add </a></li>
           </ul>
@@ -38,7 +38,7 @@
 
 
 
-        <br><a float="right" href="forgotPassword.html" >Forgot Password</a></br><br> <a href="signup.html" >Sign up</a></br>
+        <br><a float="right" href="forgotPassword.html" >Forgot Password</a></br><br> <a href="signup.php" >Sign up</a></br>
 
 
     </form>

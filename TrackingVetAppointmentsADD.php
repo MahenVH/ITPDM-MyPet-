@@ -81,6 +81,7 @@ function validate()
   }
 }
 
+
 </script>
 
 
@@ -97,7 +98,7 @@ function validate()
             <li ><a href="HomePage.html">Home</a></li>
             <li class="current"><a href="Gallery.php">Gallery</a></li>
             <li><a href="RegisterPetDetails.html">RegisterPet</a></li>
-            <li><a href="login.html">Login</a></li>
+            <li><a href="login.php">Login</a></li>
             <li ><a href="TrackingVetAppointments_VIEW_UPDATE_DELETE.html">Modify</a></li>
             <li><a href="TrackingVetAppointmentsADD.php">Add </a></li>
           </ul>

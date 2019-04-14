@@ -36,5 +36,5 @@ else
 {
 	echo 'inserted';
 }
-header("refresh:100; url=RegisterPetDetails.html");
+header("refresh:2; url=RegisterPetDetails.html");
 ?>

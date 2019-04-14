@@ -128,7 +128,7 @@
      <input type="text" name="email" id="email" placeholder="E-mail">
      <input type="password" name="pwd" id="pwd" placeholder="Password">
      <input type="password" name="cpwd" id="cpwd" placeholder="Confirm Password">
-     <button type="submit" name="submit" onclick="validate()">Sing up</button>
+     <button type="submit" name="submit" onclick="validate()">Sign up</button>
      if you already have an account   <a href="login.php">Login</a>
     </form>
 
