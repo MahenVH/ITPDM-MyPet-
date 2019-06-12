@@ -161,26 +161,9 @@ h1{
   text-align: left;
   margin-left: 10px;
 }
-/*
-.box{
-  width: 50%;
-  height: 280px;
-  background-color: gray;
-  border-radius: 10px;
-  margin-bottom: 20px;
-  float: left;
-
-
-}*/
 
 .item
-{/*
-  width: 250px;
-  height:150px;
-  margin-top: 25px;
-  margin-left: 12px;
-  margin-right: 12px;
-  border-radius: 1px;*/
+{
   width: 25%;
   height: 200px;
   background-color: gray;
@@ -190,25 +173,25 @@ h1{
   margin-bottom: 20px;
   border-radius: 10px;
   margin-right: 10px;
-
+  margin-left: 10px;
 }
 
 .title{
-  width: 24%;
-  height: 280px;
+  width: 15%;
+  height: 40px;
   float: left;
-  background-color: red;
+  background-color: #2F514E;#2F514E
   margin-bottom: 20px;
   border-radius: 10px;
   margin-right: 10px;
-
 }
 
 .paragraph{
   width:45%;
   height: 280px;
   float: right;
-  background-color: green;
-    margin-bottom: 20px;
-    border-radius: 10px;
+  background-color: #dce2e1;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  border-style: ridge;
 }

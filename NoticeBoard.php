@@ -35,7 +35,7 @@
           <?php
             include_once "includes/db.php";
 
-            $sql = "SELECT * FROM gallery ORDER BY idGallery DESC";
+            $sql = "SELECT * FROM notice ORDER BY idNotice DESC";
             $stmt = mysqli_stmt_init($conn);
             if(!mysqli_stmt_prepare($stmt, $sql)){
                 echo "SQL statement failed";
@@ -45,10 +45,10 @@
 
               while ($row = mysqli_fetch_assoc($result)){
                 echo '
-                  <div class="item" style="background-image: url(img/gallery/'.$row["imgFullNameGallery"].') ;">
+                  <div class="item" style="background-image: url(img/gallery/'.$row["imgFullNameNotice"].') ;">
                   </div>
-                  <div class=title> <h1>'.$row["titleGallery"].'</h1></div>
-                  <div class=paragraph><p>'.$row["descGallery"]. '</p></div>
+                  <div class=title> <h1>'.$row["titleNotice"].'</h1></div>
+                  <div class=paragraph><p>'.$row["descNotice"]. '</p></div>
 
                 ';
 
@@ -61,12 +61,12 @@
       </section>
       <?php
       echo '<div class="gallery-upload">
-        <form action="includes/gallery-upload.php" method="post" enctype="multipart/form-data">
-        <label> Name </label><input type="text" name="filename" placeholder="Filename.."><br>
-        <input type="text" name="filetitle" placeholder="Image Title.."><br>
-        <input type="text" name="filedesc" placeholder="Image description.."><br>
+        <form action="includes/notice-upload.php" method="post" enctype="multipart/form-data">
+        <input type="text" name="filename" placeholder="Filename.."><br>
+        <input type="text" name="filetitle" placeholder="Title"><br>
+        <input type="text" name="filedesc" placeholder="Enter a description"><br>
         <input type="file" name="file" ><br>
-        <button type="submit" name="submit" id=submit> Submit </input>
+        <button type="submit" name="submit" id=submit> Post </input>
         </form>
       </div>';
       ?>
