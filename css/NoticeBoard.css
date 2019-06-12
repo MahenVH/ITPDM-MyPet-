@@ -113,17 +113,7 @@ footer{
   justify-content: center;
 
 }
-.item
-{
-  width: 250px;
-  height:150px;
-  margin-top: 25px;
-  margin-left: 12px;
-  margin-right: 12px;
-  border-radius: 1px;
-  background-repeat: no-repeat;
 
-}
 
 
 .form{
@@ -160,40 +150,65 @@ input{
 
 }
 
-.box{
-  display: inline-block;
-  align-items: center;
-  width: 80%;
-  height: 280px;
-  background-color: gray;
-  border-radius: 10px;
-  margin: 0 auto;
-  margin-bottom: 20px;
 
-
-}
 p{
   text-align: center;
   font-size: 20px;
+
 }
 
+h1{
+  text-align: left;
+  margin-left: 10px;
+}
+/*
+.box{
+  width: 50%;
+  height: 280px;
+  background-color: gray;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  float: left;
+
+
+}*/
+
+.item
+{/*
+  width: 250px;
+  height:150px;
+  margin-top: 25px;
+  margin-left: 12px;
+  margin-right: 12px;
+  border-radius: 1px;*/
+  width: 25%;
+  height: 200px;
+  background-color: gray;
+  float: left;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  margin-right: 10px;
+
+}
 
 .title{
-  margin-bottom: :80px;
-  margin-top: 40px;
-  margin-left: 20px;
-  margin-right: 20px;
-  width: auto;
-  height: 50px;
+  width: 24%;
+  height: 280px;
   float: left;
+  background-color: red;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  margin-right: 10px;
 
 }
 
 .paragraph{
-  margin-bottom: :80px;
-  margin-top: 40px;
-  width:auto;
-  height: 100px;
-  float: left;
-
+  width:45%;
+  height: 280px;
+  float: right;
+  background-color: green;
+    margin-bottom: 20px;
+    border-radius: 10px;
 }
