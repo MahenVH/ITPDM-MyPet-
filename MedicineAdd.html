@@ -1,0 +1,124 @@
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>TrackingVetAppointmentsADD</title>
+
+    <link rel="stylesheet" type="text/css" href=".\css\VeteriarianAppointmentsADD.css"/>
+    <script type="text/javascript">
+
+
+
+function validatePetName()
+{
+	var petname = document.getElementById ("petname").value;
+		if((petname == "") || (petname == null))
+		{
+			alert("Please enter your Pet's name");
+			return false;
+		}
+		return true;
+}
+
+function validateMedicine()
+{
+	var medicine = document.getElementById("medicine").value;
+		if((medicine == "") || (medicine == null))
+		{
+			alert("Please enter medicine");
+			return false;
+		}
+		return true;
+}
+
+function validatePharmacy()
+{
+	var pharmacy = document.getElementById("pharmacy").value;
+		if((clinicname == "") || (clinicname == null))
+		{
+			alert("Please enter the pharmacy name");
+			return false;
+		}
+		return true;
+}
+
+/*function validateAppDate()
+{
+  var date=document.getElementById("appday").value;
+  regex = /^(?:(?:31(\/|-|\.)(?:0?[13578]|1[02]))\1|(?:(?:29|30)(\/|-|\.)(?:0?[13-9]|1[0-2])\2))(?:(?:1[6-9]|[2-9]\d)?\d{2})$|^(?:29(\/|-|\.)0?2\3(?:(?:(?:1[6-9]|[2-9]\d)?(?:0[48]|[2468][048]|[13579][26])|(?:(?:16|[2468][048]|[3579][26])00))))$|^(?:0?[1-9]|1\d|2[0-8])(\/|-|\.)(?:(?:0?[1-9])|(?:1[0-2]))\4(?:(?:1[6-9]|[2-9]\d)?\d{2})$;
+  if ((date == "") || (date == null) || (!date.match(regex)))
+  {
+    alert("Please enter the valid date");
+    return false;
+  }
+  return true;
+
+}*/
+
+
+
+function validate()
+{
+  if ((validatePetName()) && (validateMedicine()) && (validatePharmacy()))
+  {
+    alert("You have added a Veterinarian Appointment");
+  }
+  else {
+    event.preventDefault();
+  }
+}
+
+
+</script>
+
+
+    <link rel="stylesheet" type="text/css" href=".\css\VeteriarianAppointmentsADD.css"/>
+
+  </head>
+  <body>
+    <header>
+
+      <div class="TopBar">
+        <img src=".\img\catdog.png" width="250px" height="180px" align=top >
+        <nav>
+          <ul>
+            <li ><a href="HomePage.html">Home</a></li>
+            <li class="current"><a href="Gallery.php">Gallery</a></li>
+            <li><a href="RegisterPetDetails.html">RegisterPet</a></li>
+            <li><a href="login.php">Login</a></li>
+            <li ><a href="TrackingVetAppointments_VIEW_UPDATE_DELETE.html">Modify</a></li>
+            <li><a href="TrackingVetAppointmentsADD.php">Add </a></li>
+          </ul>
+        </nav>
+      </div>
+
+    </header>
+
+    <form action=".\includes\vetappointment.php" method="post">
+      <div class="center">
+      <label for="entryno">Entry No.</label>
+      <input type="number" id="entryno" name="entryno" value="">
+      </div>
+      <div class="center">
+      <label for="petname">Pet Name</label>
+      <input type="text" id="petname" name="petname" value="">
+      </div>
+      <div class="center">
+      <label for="vetname">Medicine</label>
+      <input type="text" id="medicine" name="medicine" value="">
+      </div>
+      <div class="center">
+      <label for="vetclinic">Pharmacy</label>
+      <input type="text" id="pharmacy" name="pharmacy" value="">
+      </div>
+      <div class="center">
+      <label for="appday">Expiry Date</label>
+      <input type="date" id="expdate" name="expdate" value="">
+      </div>
+      <div>
+      <button type="submit" name="add" class="button" onclick="validate()">Add</button>
+      <button type="reset" name="clear" class="button">Clear</button>
+      </div>
+    </form>
+
+  </body>
+</html>
