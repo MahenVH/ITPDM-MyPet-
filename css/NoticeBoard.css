@@ -1,4 +1,4 @@
-/*Basic Layout */
+/*Basic Layout*/
 body{
   font-family: Arial, Helvetica, sans-serif;
   font-size: 15px;
@@ -88,7 +88,9 @@ footer{
 
 }
 
-/*Only for this page */
+/*Only for this page*/
+
+
 .gallery-container
 {
 
@@ -119,7 +121,7 @@ footer{
   margin-left: 12px;
   margin-right: 12px;
   border-radius: 1px;
-
+  background-repeat: no-repeat;
 
 }
 
@@ -155,5 +157,38 @@ input{
 #submit:hover{
   background: gray;
   box-shadow: 0px 0px 0px;
+
+}
+
+.box{
+  display: inline-block;
+  align-items: center;
+  width: 80%;
+  height: 300px;
+  background-color: gray;
+  border-radius: 10px;
+  margin: auto 0px;
+  margin-bottom: 20px
+
+
+}
+
+.title{
+  margin-bottom: :80px;
+  margin-top: 40px;
+  margin-left: 20px;
+  margin-right: 20px;
+  width: auto;
+  height: 50px;
+  float: left;
+
+}
+
+.paragraph{
+  margin-bottom: :80px;
+  margin-top: 40px;
+  width:auto;
+  height: 100px;
+  float: left;
 
 }

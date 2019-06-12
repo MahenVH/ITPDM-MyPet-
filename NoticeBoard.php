@@ -2,8 +2,8 @@
 <html lang="en" dir="ltr">
 <head>
   <meta charset="utf-8">
-  <title>Gallery</title>
-  <link rel="stylesheet" href="./css/style.css">
+  <title>Notice Board</title>
+  <link rel="stylesheet" href="./css/NoticeBoard.css">
 
 </head>
 <body>
@@ -16,6 +16,7 @@
           <li ><a href="HomePage.html">Home</a></li>
           <li class="current"><a href="Gallery.php">Gallery</a></li>
           <li><a href="RegisterPetDetails.html">RegisterPet</a></li>
+          <li><a href="NoticeBoard.php">Notice Board</a></li>
           <li><a href="login.html">Login</a></li>
           <li ><a href="TrackingVetAppointments_VIEW_UPDATE_DELETE.html">Modify</a></li>
           <li><a href="TrackingVetAppointmentsADD.php">Add </a></li>
@@ -28,7 +29,7 @@
     <section >
 
       <div class="wrapper">
-        <h2>Gallery</h2>
+        <h2>Notice Board</h2>
 
         <section class="gallery-container">
           <?php
@@ -45,8 +46,8 @@
               while ($row = mysqli_fetch_assoc($result)){
                 echo '<div class="box">
                   <div class="item" style="background-image: url(img/gallery/'.$row["imgFullNameGallery"].') ;"></div>
-                  <h2>'.$row["titleGallery"].'</h2>
-                  <p>'.$row["descGallery"].'</p>
+                  <div class="title"><h1>'.$row["titleGallery"].'</h1></div>
+                  <div class="paragraph"><p>'.$row["descGallery"]. '</p></div>
                   </div>
                 ';
 
