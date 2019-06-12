@@ -46,8 +46,8 @@
               while ($row = mysqli_fetch_assoc($result)){
                 echo '<div class="box">
                   <div class="item" style="background-image: url(img/gallery/'.$row["imgFullNameGallery"].') ;"></div>
-                  <div class="title"><h1>'.$row["titleGallery"].'</h1></div>
-                  <div class="paragraph"><p>'.$row["descGallery"]. '</p></div>
+                  <h1>'.$row["titleGallery"].'</h1>
+                  <p>'.$row["descGallery"]. '</p>
                   </div>
                 ';
 
