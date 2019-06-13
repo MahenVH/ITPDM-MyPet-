@@ -129,10 +129,10 @@
       <img src=".\img\catdog.png" width="250px" height="180px" align=top >
       <nav>
         <ul>
-          <li class="current"><a href="HomePage.html">Home</a></li>
+          <li class="current"><a href="HomePage.php">Home</a></li>
           <li ><a href="Gallery.php">Gallery</a></li>
           <li><a href="RegisterPetDetails.html">RegisterPet</a></li>
-          <li><a href="login.html">Login</a></li>
+          <li><a href="Login.html">Login</a></li>
           <li ><a href="TrackingVetAppointments_VIEW_UPDATE_DELETE.html">Modify</a></li>
           <li><a href="TrackingVetAppointmentsADD.php">Add </a></li>
         </ul>

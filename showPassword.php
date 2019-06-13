@@ -32,7 +32,13 @@
     <form action=".\includes\forget.php" method="post">
         <h1>Your Password</h1>
 
+        <?php 
+        if (isset($_GET["newpwd"])) {
+          if ($_GET["newpwd"] == "passwordupdated") {
+            echo '<p class="signupsuccess">Your password has been reset</p>';
 
+          }
+        } ?>
 
             <button type="submit" name="submit" href="../Login.php" > <a href="login.php">Back to Login</a></button>
 

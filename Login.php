@@ -91,7 +91,7 @@
 
 
 
-        <br><a float="right" href="ForgotPassword.html" >Forgot Password</a></br><br> <a href="signup.php" >Sign up</a></br>
+        <br><a float="right" href="forgotPassword.html" >Forgot Password</a></br><br> <a href="signup.php" >Sign up</a></br>
 
 
     </form>
