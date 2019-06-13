@@ -39,8 +39,9 @@ if($valid){
   header('Location:../HomePage.php');
 }else{
   $_SESSION['message']="Incorrect Username or Password.";
-        header("location:login.php");
-        echo '<h3>Invalid username or password</h3>';
+        header("location:../login.php");
+        alert("Invalid username or password");
+
 }
 }
 ?>

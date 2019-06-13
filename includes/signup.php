@@ -20,12 +20,13 @@ $Lname=$_POST['lname'];
 $Email=$_POST['email'];
 $Password=$_POST['pwd'];
 $Cpassword=$_POST['cpwd'];
+$nic=$_POST['nic'];
 
 
 
 
 
-$sql="INSERT INTO signup (Fname,Lname,Email,Password,Cpassword) VALUES ('$Fname','$Lname','$Email','$Password','$Cpassword')";
+$sql="INSERT INTO signup (Fname,Lname,Email,Password,Cpassword,nic) VALUES ('$Fname','$Lname','$Email','$Password','$Cpassword','$nic')";
 
 $sql1="INSERT INTO login (Email,Password) VALUES ('$Email','$Password')";
 

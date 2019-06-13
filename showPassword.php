@@ -6,41 +6,6 @@
     <meta charset="utf-8">
     <title></title>
     <link rel="stylesheet" href="./css/forgotPassword.css">
-    <script type="text/javascript">
-
-
-
-
-
-
-        function validatenic()
-        {
-          var nic= document.getElementById("nic").value;
-
-          var len = nic.length;
-
-          if( len != 10  )
-          {
-              alert("Incorrect NIC");
-            return false;
-          }
-          return true;
-        }
-
-            function validate()
-            {
-               if(validatenic()   )
-              {
-
-
-              }
-              else
-              {
-                event.preventDefault();
-              }
-            }
-
-            </script>
 
 
   </head>
@@ -65,11 +30,11 @@
 
   <div class="login">
     <form action=".\includes\forget.php" method="post">
-        <h1>Forget My Password</h1>
-        <p>Please enter you NIC number</p>
-      <input type="text" name="nic" id="nic" placeholder="Enter your NIC Address">
+        <h1>Your Password</h1>
 
-      <button type="submit" name="submit" onclick="validate()">Search</button>
+
+
+            <button type="submit" name="submit" href="../Login.php" > <a href="login.php">Back to Login</a></button>
 
 
 
