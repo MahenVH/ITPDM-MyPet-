@@ -77,7 +77,7 @@
                 <td>".$row['appday']."</td>
                 <td>".$row['apptime']."</td>
                 <td>".$row['email']."</td>
-                <td><a href=D:\XAMP\htdocs\ITPDM-MyPet-\includes\delete.php?entry=".$row['entry'].">Delete</a></td></tr>";
+                <td><a href=includes\delete.php?entry=".$row['entry'].">Delete</a></td></tr>";
 
               }
 
