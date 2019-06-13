@@ -94,7 +94,7 @@ footer{
   display: inline-block;
   text-align: center;
 }
-.input{
+/*input{
   margin-bottom: .2px;
   display: inline-block;
   width: 480px;
@@ -102,20 +102,26 @@ footer{
   border-radius: 10px;
   border-left: 2px;
   margin-top: 8px;
+  */
+  input{
+    display: inline-block;
+    float: left;
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+  }
 
 
 
 }
 
-.label{
-width: 20px;
+div label{
   display: inline-block;
-
-
-}
-
-.DOB {
-  display: inline-block;
-}
-}
+  float: left;
+  clear: left;
+  width: 250px;
+  text-align: left;
+  color: white;
+  font-size: 20px;
 }
