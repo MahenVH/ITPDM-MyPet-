@@ -49,7 +49,7 @@
                 Email
               </th>
             </tr>
-            <tr>
+
 
             <?php
 
@@ -69,24 +69,39 @@
             $result =$conn-> query($sql);
             if ($result-> num_rows > 0) {
               while ($row = $result-> fetch_assoc()) {
-                echo "<tr><td>".$row["entry"]."</td><td>".$row["petname"]."</td><td>".$row["vetname"]."</td><td>".$row["vetclinicname"]."</td><td>".$row["appday"]."</td><td>".$row["apptime"]."</td><td>".$row["email"]."</td></tr>";
+                echo "<tr>
+                <td>".$row['entry']."</td>
+                <td>".$row['petname']."</td>
+                <td>".$row['vetname']."</td>
+                <td>".$row['vetclinicname']."</td>
+                <td>".$row['appday']."</td>
+                <td>".$row['apptime']."</td>
+                <td>".$row['email']."</td>
+                <td><a href=D:\XAMP\htdocs\ITPDM-MyPet-\includes\delete.php?entry=".$row['entry'].">Delete</a></td></tr>";
 
               }
+
+
               echo "</table>";
             }
             else {
               echo "0 result";
             }
+
+
+
             $conn->close();
             ?>
+
+
+
+
 
 
           </table>
 
           <div>
           <button type="submit" name="view" class="button button1">View</button>
-          <button type="submit" name="update" class="button button1">Update</button>
-          <button type="submit" name="Delete" class="button button1">Delete</button>
           </div>
         </form>
 
