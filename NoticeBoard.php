@@ -63,8 +63,6 @@
       </section>
       <?php
       echo '<div class="gallery-upload">
-
-      
         <form action="includes/notice-upload.php" method="post" enctype="multipart/form-data">
         <input type="text" name="filename" placeholder="Subject"><br>
         <input type="text" name="filetitle" placeholder="Title"><br>
