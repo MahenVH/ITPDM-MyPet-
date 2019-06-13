@@ -29,8 +29,9 @@
     <section >
 
       <div class="wrapper">
-        <h2 align:center >Notice Board</h2>
 
+        <h2 align:center >Notice Board</h2>
+        <hr>
         <section class="gallery-container">
           <?php
             include_once "includes/db.php";
@@ -47,7 +48,7 @@
                 echo '
                   <div class="item" style="background-image: url(img/gallery/'.$row["imgFullNameNotice"].') ;">
                   </div>
-                  <div class=title> <h1>'.$row["titleNotice"].'</h1></div>
+                  <div class=title> <p>'.$row["titleNotice"].'</p></div>
                   <div class=paragraph><p>'.$row["descNotice"]. '</p></div>
 
                 ';
@@ -57,11 +58,13 @@
             ?>
         </section>
       </div>
-
+      <hr>
+      <h1> Create your own notice </h1>
       </section>
       <?php
       echo '<div class="gallery-upload">
-      <label> Create a new notice </label>
+
+      
         <form action="includes/notice-upload.php" method="post" enctype="multipart/form-data">
         <input type="text" name="filename" placeholder="Subject"><br>
         <input type="text" name="filetitle" placeholder="Title"><br>
