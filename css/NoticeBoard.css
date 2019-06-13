@@ -1,4 +1,4 @@
-/*Basic Layout */
+/*Basic Layout*/
 body{
   font-family: Arial, Helvetica, sans-serif;
   font-size: 15px;
@@ -88,7 +88,9 @@ footer{
 
 }
 
-/*Only for this page */
+/*Only for this page*/
+
+
 .gallery-container
 {
 
@@ -111,17 +113,7 @@ footer{
   justify-content: center;
 
 }
-.item
-{
-  width: 250px;
-  height:150px;
-  margin-top: 25px;
-  margin-left: 12px;
-  margin-right: 12px;
-  border-radius: 1px;
 
-
-}
 
 
 .form{
@@ -156,4 +148,50 @@ input{
   background: gray;
   box-shadow: 0px 0px 0px;
 
+}
+
+
+p{
+  text-align: center;
+  font-size: 20px;
+
+}
+
+h1{
+  text-align: left;
+  margin-left: 10px;
+}
+
+.item
+{
+  width: 25%;
+  height: 200px;
+  background-color: gray;
+  float: left;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.title{
+  width: 15%;
+  height: 40px;
+  float: left;
+  background-color: #2F514E;#2F514E
+  margin-bottom: 20px;
+  border-radius: 10px;
+  margin-right: 10px;
+}
+
+.paragraph{
+  width:45%;
+  height: 280px;
+  float: right;
+  background-color: #dce2e1;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  border-style: ridge;
 }
