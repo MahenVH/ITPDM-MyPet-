@@ -29,7 +29,7 @@
     <section >
 
       <div class="wrapper">
-        <h2>Notice Board</h2>
+        <h2 align:center >Notice Board</h2>
 
         <section class="gallery-container">
           <?php
@@ -61,11 +61,12 @@
       </section>
       <?php
       echo '<div class="gallery-upload">
+      <label> Create a new notice </label>
         <form action="includes/notice-upload.php" method="post" enctype="multipart/form-data">
-        <input type="text" name="filename" placeholder="Filename.."><br>
+        <input type="text" name="filename" placeholder="Subject"><br>
         <input type="text" name="filetitle" placeholder="Title"><br>
-        <input type="text" name="filedesc" placeholder="Enter a description"><br>
-        <input type="file" name="file" ><br>
+        <input type="text" id="filedesc" name="filedesc" placeholder="Enter a description"><br>
+        <input type="file" name="file"><br>
         <button type="submit" name="submit" id=submit> Post </input>
         </form>
       </div>';
