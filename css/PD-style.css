@@ -92,7 +92,7 @@ footer{
   margin-left: auto;
   margin-right: auto;
   display: inline-block;
-  text-align: center;
+  text-align: left;
 }
 input{
   margin-bottom: .2px;
