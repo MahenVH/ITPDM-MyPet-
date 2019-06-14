@@ -136,6 +136,12 @@ function validate()
       display: block;
     }
 
+    .form{
+      margin-left: auto;
+      margin-right: auto;
+      display: inline-block;
+      text-align: center;
+    }
     </style>
 
   </head>

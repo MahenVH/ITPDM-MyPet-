@@ -1,36 +1,34 @@
 <?php
 
-$currentDate =  date('Y-m-d');
+
+$currentDate = date('Y-m-d'); //this will get the current date ie when this was posted 2107-07-06
+
 
 $servername = "localhost";
 $username = "root";
 $password = "";
 $dbname = "mypet";
 
-$dbcon = mysqli_connect($servername,$username,$password,$dbname);
+    $dbcon = mysqli_connect($servername,$username,$password,$dbname); //connect to database
+    if($dbcon->connect_error) die($dbcon->connect_error);
+    $remind_query1 = "select email from vetappointment";
+    /*$result = mysqli_query($dbcon,$remind_query1);*/
 
-if($dbcon->connect_error) die($dbcon->connect_error);
+	if($run1 = $dbcon->query($remind_query1))
+    {
+	     $rows = $run1->num_rows;
 
-$remind_query = "SELECT vetname,email From vetappointment WHERE appday = '$currentDate'";
-$run = mysqli_query($dbcon, $remind_query);
+          for ($j = 0; $j < $rows; ++$j)
+          {
+          	  $run1->data_seek($j);
+          	  $row = $run1->fetch_array(MYSQLI_NUM);
 
+          	  $to = $row['email'];
+              $subject = "Code 30 Reminder";
+              $message = "Hi ";
+              $headers = "From: Bridges Nursery";
 
-
-        while($row=mysqli_fetch_array($run))
-        {
-        	  $parID=$row[0];
-        		$parVetname=$row[2];
-            $parAppday=$row[4];
-        		$parEmail=$row[6];
-
-            $to= "mahenh@gmail.com";
-            $subject="Reminder";
-
-            $txt = "hi";
-
-            $headers = "From: baddrakw@gmail.com";
-
-
-            mail($to,$subject,$txt,$headers);
-        }
+    		  mail($to,$subject,$message,$headers);
+          }
+	     }
 ?>
