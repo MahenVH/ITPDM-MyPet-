@@ -94,3 +94,41 @@ footer{
   width: 100%;
 
 }
+
+.center{
+  margin: auto;
+width: 60%;
+padding: 10px;
+}
+
+
+input{
+  display: inline-block;
+  float: left;
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+
+div label{
+display: inline-block;
+float: left;
+clear: left;
+width: 250px;
+text-align: left;
+color: white;
+font-size: 20px;
+}
+
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
