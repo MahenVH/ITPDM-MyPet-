@@ -117,32 +117,8 @@
         <img src=".\img\catdog.png" width="250px" height="180px" align=top >
         <nav>
           <ul>
-            <li class="current"><a href="HomePage.php">Home</a></li>
-            <li ><a href="Gallery.php">Gallery</a></li>
-            <li><a href="RegisterPetDetails.html">RegisterPet</a></li>
+            <li class="current"><a href="HomePageBeforeLogin.html">Home</a></li>
             <li><a href="Login.php">Login</a></li>
-            <li><div class="dropdown">
-              <button class="dropbtn"> Veterinarian
-                <i class="fa fa-caret-down"></i>
-              </button>
-              <div class="dropdown-content">
-                <a href="TrackingVetAppointmentsADD.php">Add appointments</a>
-                <a href="TrackingVetAppointments_VIEW_UPDATE_DELETE.php">Modify Appointments</a>
-              </div>
-              </button>
-            </div></li>
-
-            <li><div class="dropdown">
-              <button class="dropbtn"> Medical
-                <i class="fa fa-caret-down"></i>
-              </button>
-              <div class="dropdown-content">
-                <a href="MedicineAdd.html">Add Medical Details</a>
-                <a href="MedicineViewUpdateDelete.html">Modify Medical details</a>
-              </div>
-            </button>
-          </div>
-          </li>
 
 
 
