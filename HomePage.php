@@ -197,7 +197,7 @@
             </button>
             <div class="dropdown-content">
               <a href="MedicineAdd.html">Add Medical Details</a>
-              <a href="MedicineViewUpdateDelete.html.php">Modify Medical details</a>
+              <a href="MedicineViewUpdateDelete.html">Modify Medical details</a>
             </div>
           </button>
         </div>
