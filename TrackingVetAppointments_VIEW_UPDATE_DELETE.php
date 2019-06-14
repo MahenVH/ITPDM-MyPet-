@@ -130,6 +130,9 @@
               <th>
                 Email
               </th>
+              <th colspan="2">
+                Operations
+              </th>
             </tr>
 
 
@@ -159,6 +162,7 @@
                 <td>".$row['appday']."</td>
                 <td>".$row['apptime']."</td>
                 <td>".$row['email']."</td>
+                <td><a href=includes\Update.php?rn=".$row['entry'].">Edit</a></td>
                 <td><a href=includes\delete.php?entry=".$row['entry'].">Delete</a></td></tr>";
 
               }
