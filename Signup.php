@@ -135,13 +135,7 @@
      if you already have an account   <a href="login.php">Login</a>
     </form>
 
-    <?php 
-    if (isset($_GET["newpwd"])) {
-      if ($_GET["newpwd"] == "passwordupdated") {
-        echo '<p class="signupsuccess">Your password has been reset</p>';
 
-      }
-    } ?>
 
    </div>
 </section>
