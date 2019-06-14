@@ -1,7 +1,7 @@
 <?php
 
 
-$currentDate = date('Y-m-d'); //this will get the current date ie when this was posted 2107-07-06
+/*$currentDate = date('Y-m-d');*/ //this will get the current date ie when this was posted 2107-07-06
 
 
 $servername = "localhost";
@@ -9,26 +9,49 @@ $username = "root";
 $password = "";
 $dbname = "mypet";
 
-    $dbcon = mysqli_connect($servername,$username,$password,$dbname); //connect to database
-    if($dbcon->connect_error) die($dbcon->connect_error);
-    $remind_query1 = "select email from vetappointment";
-    /*$result = mysqli_query($dbcon,$remind_query1);*/
+    $dbcon = mysqli_connect($servername,$username,$password,$dbname) or die(mysql_error()); //connect to database
 
-	if($run1 = $dbcon->query($remind_query1))
-    {
-	     $rows = $run1->num_rows;
+    $query = "select * from vetappointment";
+    $result = mysqli_query($dbcon,$query);
 
-          for ($j = 0; $j < $rows; ++$j)
-          {
-          	  $run1->data_seek($j);
-          	  $row = $run1->fetch_array(MYSQLI_NUM);
+    	$retval = false;
 
-          	  $to = $row['email'];
-              $subject = "Code 30 Reminder";
-              $message = "Hi ";
-              $headers = "From: Bridges Nursery";
+    if ($result) {
+		  while($row = mysqli_fetch_array($result)) {
+				  $entryNo=$row['entry'];
+			  	$petName=$row['petname'];
+			  	$vetName=$row['vetname'];
+			  	$vetClinicName=$row['vetclinicname'];
+			  	$appDay=$row['appday'];
+          $appTime=$row['apptime'];
+          $email=$row['email'];
 
-    		  mail($to,$subject,$message,$headers);
-          }
-	     }
+          $current = strtotime(date("Y-m-d"));
+          $date    = strtotime($appDay);
+
+          $datediff = $date - $current;
+          $difference = floor($datediff/(60*60*24));
+
+          if($difference>10)//10 days;
+				{
+					//email code
+					$to = $email;
+					$subject = "Health For Pets Reminder";
+
+					$message = "hi";
+					//$header = "From:".$ownerEmail." \r\n";
+					$header = "From: baddrakw@gmail.com\r\n";
+					$header .= "MIME-Version: 1.0\r\n";
+					$header .= "Content-type: text/html\r\n";
+					ini_set('SMTP','tls://smtp.gmail.com'); ini_set('smtp_port',587);
+					$retval = mail($to,$subject,$message,$header);
+				}
+      }
+}
+        else {
+    		  echo mysql_error();
+    		}
+
+
+
 ?>
