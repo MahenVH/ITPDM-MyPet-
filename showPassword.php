@@ -27,10 +27,7 @@
   <section>
 
   <div class="login">
-    <form action=".\includes\forget.php" method="post">
-        <h1>Your Password</h1>
-
-
+<?php
       $servername = "localhost";
       $username = "root";
       $password = "";
