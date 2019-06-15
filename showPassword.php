@@ -32,20 +32,6 @@
     <form action=".\includes\forget.php" method="post">
         <h1>Your Password</h1>
 
-        <?php
-        $sql = "SELECT nic FROM mypet";
-        $result = mysqli_query($conn,$sql);
-
-        if (mysqli_num_rows($result)>0) {
-          while ($row= mysqli_fetch_assoc($result)) {
-            echo "id:" . $row["nic"].;
-          }
-          }else {
-            echo "0 results";
-
-        }
-
-         ?>
 
             <button type="submit" name="submit" href="../Login.php" > <a href="login.php">Back to Login</a></button>
 
