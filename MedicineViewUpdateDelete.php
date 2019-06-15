@@ -1,3 +1,7 @@
+
+<?php
+session_start();
+?>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
@@ -120,74 +124,56 @@
               <th>
                 Expiry Date
               </th>
-              <th>
-                Appointment time
-              </th>
-              <th>
-                Email
-              </th>
+
             </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
+
+
+            <?php
+
+            $servername = "localhost";
+            $username = "root";
+            $password = "";
+            $dbname = "mypet";
+
+            $conn = mysqli_connect($servername,$username,$password,$dbname);
+
+            if ($conn->connect_error) {
+              die("Connection failed".$conn-> connect_error);
+            }
+
+            /*$_SESSION["uid"]= $Email;*/
+            $sql="SELECT * FROM medicine ";
+            $result =$conn-> query($sql);
+            if ($result-> num_rows> 0) {
+              while ($row = $result-> fetch_assoc()) {
+                echo "<tr>
+                <td>".$row['entryno']."</td>
+                <td>".$row['petname']."</td>
+                <td>".$row['medicine']."</td>
+                <td>".$row['pharmacy']."</td>
+                <td>".$row['expdate']."</td>
+                <td><a href=includes\deleteMedicine.php?entryno=".$row['entryno'].">Delete</a></td></tr>";
+
+
+
+
+              }
+
+
+              echo "</table>";
+            }
+            else {
+              echo "0 result";
+            }
+
+
+
+            $conn->close();
+            ?>
+
           </table>
 
-          <div>
-          <button type="submit" name="view" class="button button1">View</button>
-          <button type="submit" name="update" class="button button1">Update</button>
-          <button type="submit" name="Delete" class="button button1">Delete</button>
-          </div>
+
         </form>
 
   </body>

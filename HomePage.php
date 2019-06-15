@@ -202,7 +202,7 @@ echo "$Email"
             </button>
             <div class="dropdown-content">
               <a href="MedicineAdd.php">Add Medical Details</a>
-              <a href="MedicineViewUpdateDelete.html">Modify Medical details</a>
+              <a href="MedicineViewUpdateDelete.php">Modify Medical details</a>
             </div>
           </button>
         </div>
