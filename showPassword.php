@@ -37,12 +37,12 @@
       $conn = mysqli_connect($servername,$username,$password,$dbname);
 
       $connectdb=mysqli_select_db($conn,'mypet');
-      $result=mysqli_query($conn,'select nic from signup');
+      $result=mysqli_query($conn,'select Password from signup');
 
       while ($row = mysqli_fetch_array ($result))
       {
 
-    echo '<input type="text" name="Namex" value='.$row['nic'].'>';
+    echo '<input type="text" name="Namex" value='.$row['Password'].'>';
 
 
     }
