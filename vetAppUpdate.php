@@ -1,7 +1,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>TrackingVetAppointmentsADD</title>
+    <title>TrackingVetAppointmentsUPDATE</title>
 
     <link rel="stylesheet" type="text/css" href=".\css\VeteriarianAppointmentsADD.css"/>
     <script type="text/javascript">
@@ -187,7 +187,7 @@ function validate()
     <form action=".\includes\Update.php" method="post">
       <div class="center">
       <label for="entryno">Entry No.</label>
-      <input type="number" id="entryno" name="entryno" value="">
+      <input type="number" id="entryno" name="entryno" value="<?php echo $_GET['rn']; ?>">
       </div>
       <div class="center">
       <label for="petname">Pet Name</label>

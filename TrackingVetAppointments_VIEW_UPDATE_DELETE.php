@@ -162,7 +162,7 @@
                 <td>".$row['appday']."</td>
                 <td>".$row['apptime']."</td>
                 <td>".$row['email']."</td>
-                <td><a href=includes\Update.php?rn=".$row['entry'].">Edit</a></td>
+                <td><a href='includes\Update.php?rn=$row[entry]&pn=$row[petname]&vn=$row[vetname]&vcn=$row[vetclinicname]&ad=$row[appday]&at=$row[apptime]&em=$row[email]'>Edit</a></td>
                 <td><a href=includes\delete.php?entry=".$row['entry'].">Delete</a></td></tr>";
 
               }
