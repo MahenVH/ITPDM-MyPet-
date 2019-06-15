@@ -59,7 +59,7 @@
 
 
   <div class="login">
-<<<<<<< HEAD
+
 
     <form action="" method="post">
         <h1>You can search your Password from your NIC</h1>
@@ -100,15 +100,6 @@
        ?>
 
 
-
-
-=======
-<?php
-      $servername = "localhost";
-      $username = "root";
-      $password = "";
-      $dbname = "mypet";
->>>>>>> 74e90982a132166b02b24a47a6adc6b01b099a16
 
 </form>
 
