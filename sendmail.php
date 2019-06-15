@@ -32,13 +32,13 @@ $dbname = "mypet";
           $datediff = $date - $current;
           $difference = floor($datediff/(60*60*24));
 
-          if($difference>10)//10 days;
+          if($difference=5)//5 days;
 				{
 					//email code
 					$to = $email;
-					$subject = "Health For Pets Reminder";
+					$subject = "Pets veterinarian appointment reminder";
 
-					$message = "hi";
+					$message = "Your appointment is due in 5 days with ".$vetName." on ".$appDay."";
 					//$header = "From:".$ownerEmail." \r\n";
 					$header = "From: baddrakw@gmail.com\r\n";
 					$header .= "MIME-Version: 1.0\r\n";

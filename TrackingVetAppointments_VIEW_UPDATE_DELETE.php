@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -149,7 +153,7 @@
               die("Connection failed".$conn-> connect_error);
             }
 
-
+            /*$_SESSION["uid"]= $Email;*/
             $sql="SELECT entry,petname,vetname,vetclinicname,appday,apptime,email FROM vetappointment";
             $result =$conn-> query($sql);
             if ($result-> num_rows > 0) {
@@ -187,7 +191,7 @@
           </table>
 
           <div>
-          <button type="submit" name="view" class="button button1">View</button>
+          <button type="submit" name="view" class="button1">View</button>
           </div>
         </form>
 
