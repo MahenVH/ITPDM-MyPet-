@@ -1,6 +1,6 @@
 <?php
 session_start();
-echo "$Email"
+
 ?>
 
 <!DOCTYPE html>
