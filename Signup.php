@@ -106,12 +106,8 @@
 
         <nav>
           <ul>
-            <li ><a href="HomePage.php">Home</a></li>
-            <li class="current"><a href="Gallery.html">Gallery</a></li>
-            <li><a href="RegisterPetDetails.html">Register Your Pet</a></li>
-            <li><a href="login.php">Login</a></li>
-            <li ><a href="TrackingVetAppointments_VIEW_UPDATE_DELETE.html">View Update Delete</a></li>
-            <li><a href="TrackingVetAppointmentsADD.html">Add </a></li>
+            <li ><a href="HomePageBeforeLogin.html">Home</a></li>
+            <li><a href="Login.php">Login</a></li>
           </ul>
         </nav>
 

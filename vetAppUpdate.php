@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
@@ -185,37 +184,37 @@ function validate()
 
     </header>
 
-    <form action=".\includes\vetappointment.php" method="post">
+    <form action=".\includes\Update.php" method="post">
       <div class="center">
       <label for="entryno">Entry No.</label>
       <input type="number" id="entryno" name="entryno" value="">
       </div>
       <div class="center">
       <label for="petname">Pet Name</label>
-      <input type="text" id="petname" name="petname" value="">
+      <input type="text" id="petname" name="petname" value="<?php echo $_GET['pn']; ?>">
       </div>
       <div class="center">
       <label for="vetname">Veterinarian Name</label>
-      <input type="text" id="vetname" name="vetname" value="">
+      <input type="text" id="vetname" name="vetname" value="<?php echo $_GET['vn']; ?>">
       </div>
       <div class="center">
       <label for="vetclinic">Veterinarian Clinic</label>
-      <input type="text" id="vetclinic" name="vetclinic" value="">
+      <input type="text" id="vetclinic" name="vetclinic" value="<?php echo $_GET['vcn']; ?>">
       </div>
       <div class="center">
       <label for="appday">Appointment day</label>
-      <input type="date" id="appday" name="appday" value="">
+      <input type="date" id="appday" name="appday" value="<?php echo $_GET['ad']; ?>">
       </div>
       <div class="center">
       <label for="apptime">Appointment time</label>
-      <input type="time" id="apptime" name="apptime" value="">
+      <input type="time" id="apptime" name="apptime" value="<?php echo $_GET['at']; ?>">
       </div>
       <div class="center">
       <label for="email">Email</label>
-      <input type="text" id="email" name="email" value="">
+      <input type="text" id="email" name="email" value="<?php echo $_GET['em']; ?>">
       </div>
       <div class="buttons">
-      <button type="submit" name="add" class="button" onclick="validate()">Add</button>
+      <button type="submit" name="update" class="button" onclick="validate()">Update</button>
       <button type="reset" name="clear" class="button" id="reset">Clear</button>
     </div>
     </form>
