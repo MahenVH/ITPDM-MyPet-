@@ -201,7 +201,7 @@ echo "$Email"
               <i class="fa fa-caret-down"></i>
             </button>
             <div class="dropdown-content">
-              <a href="MedicineAdd.html">Add Medical Details</a>
+              <a href="MedicineAdd.php">Add Medical Details</a>
               <a href="MedicineViewUpdateDelete.html">Modify Medical details</a>
             </div>
           </button>
