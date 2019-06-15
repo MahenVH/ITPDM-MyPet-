@@ -1,3 +1,8 @@
+<?php
+session_start();
+echo "$Email"
+?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
