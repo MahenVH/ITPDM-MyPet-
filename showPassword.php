@@ -24,19 +24,12 @@
       </div>
     </header>
 <main>
-<<<<<<< HEAD
-<section>
-
-    <div class="login">
- <?php
-=======
   <section>
 
   <div class="login">
     <form action=".\includes\forget.php" method="post">
         <h1>Your Password</h1>
 
->>>>>>> 9e9aa1c5d971b9438ec50c1eaedb72c3e4719432
 
       $servername = "localhost";
       $username = "root";
