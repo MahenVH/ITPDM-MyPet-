@@ -1,5 +1,3 @@
-<?php session_start() ?>
-
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -26,37 +24,31 @@
       </div>
     </header>
 <main>
-  <section>
+<section>
 
-  <div class="login">
-    <form action=".\includes\forget.php" method="post">
-        <h1>Your Password</h1>
+    <div class="login">
+ <?php
 
-        <?php
-        $sql = "SELECT nic FROM mypet";
-        $result = mysqli_query($conn,$sql);
+      $servername = "localhost";
+      $username = "root";
+      $password = "";
+      $dbname = "mypet";
 
-        if (mysqli_num_rows($result)>0) {
-          while ($row= mysqli_fetch_assoc($result)) {
-            echo "id:" . $row["nic"].;
-          }
-          }else {
-            echo "0 results";
+      $conn = mysqli_connect($servername,$username,$password,$dbname);
 
-        }
+      $connectdb=mysqli_select_db($conn,'mypet');
+      $result=mysqli_query($conn,'select nic from signup');
 
-         ?>
+      while ($row = mysqli_fetch_array ($result))
+      {
 
-            <button type="submit" name="submit" href="../Login.php" > <a href="login.php">Back to Login</a></button>
+    echo '<input type="text" name="Namex" value='.$row['nic'].'>';
 
 
+    }
+?>
+</div>
 
-
-
-
-    </form>
-
-   </div>
 </section>
 </main>
 
