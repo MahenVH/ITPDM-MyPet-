@@ -1,4 +1,4 @@
-
+<?php session_start(); ?>
 
   <?php
 
@@ -35,13 +35,13 @@ if(mysqli_num_rows($result) > 0)
 
 mysqli_close($conn);}
 
-if($valid){
-  header('Location:../HomePage.php');
-}else{
-  $_SESSION['message']="Incorrect Username or Password.";
-        header("location:../login.php");
-        alert("Invalid username or password");
+  if($valid){
+    header('Location:../HomePage.php');
+  }else{
+    $_SESSION['message']="Incorrect Username or Password.";
+          header("location:../login.php");
+          alert("Invalid username or password");
 
-}
+  }
 }
 ?>

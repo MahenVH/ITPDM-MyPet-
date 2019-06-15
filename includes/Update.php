@@ -34,7 +34,7 @@ $apptime=$_GET['apptime'];
 $email=$_GET['email'];
 
 if($_GET['update']){
-$sql="UPDATE vetappointment (petname='$petname',vetname='$vetname',vetclinicname='$vetclinicname',appday='$appday',apptime='$apptime',email='$email') WHERE entry=$entry";
+$sql="UPDATE vetappointment (petname='$petname',vetname='$vetname',vetclinicname='$vetclinicname',appday='$appday',apptime='$apptime',email='$email') WHERE entry=$_GET[rn]";
 
 
 if (mysqli_query($conn,$sql)) {
@@ -45,5 +45,5 @@ else {
 }
 }
 
-  header("Location: ../TrackingvetAppUpdate.php");
+  header("Location: ../vetAppUpdate.php");
  ?>

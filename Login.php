@@ -1,3 +1,6 @@
+<?php
+session_start();
+ ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -132,19 +135,25 @@
   <section>
 
   <div class="login">
+
     <form action=".\includes\login.php" method="post">
         <h1>Login Page</h1>
       <input type="text" name="uid" id="uid" placeholder="E-mail">
       <input type="password" name="pwd" id="pwd" placeholder="Password">
       <button type="submit" name="submit" onclick="validate()" >Login</button>
 
+<<<<<<< HEAD
 
 
 
         <br><a float="right" href="showPassword.php" >Forgot Password</a></br><br> <a href="signup.php" >Sign up</a></br>
+=======
+      <br><a float="right" href="forgotPassword.html" >Forgot Password</a></br><br> <a href="signup.php" >Sign up</a></br>
+>>>>>>> 74e90982a132166b02b24a47a6adc6b01b099a16
 
 
     </form>
+
 
    </div>
 </section>

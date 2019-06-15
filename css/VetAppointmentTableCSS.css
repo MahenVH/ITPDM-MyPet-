@@ -26,7 +26,7 @@ h2{
 }
 
 .TopBar{
-  width:  1350px;
+  width:  100%;
   height: 200px;
   overflow: hidden;
 
@@ -48,6 +48,7 @@ header nav{
   margin-top: 70px;
   width: 700px;
   padding : 5px;
+  margin-right: 80px;
 
 }
 
@@ -73,7 +74,7 @@ header a{
 }
 
 header a:hover{
-  color: black;
+  color: #cccccc;
 
 }
 
@@ -125,7 +126,7 @@ width: 60%;
 padding: 10px;
 }
 
-div button{
+.button1{
   display: inline-block;
   background-color: green;
   border: none;
