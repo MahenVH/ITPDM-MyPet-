@@ -154,9 +154,9 @@ session_start();
             }
 
             /*$_SESSION["uid"]= $Email;*/
-            $sql="SELECT entry,petname,vetname,vetclinicname,appday,apptime,email FROM vetappointment";
+            $sql="SELECT entry,petname,vetname,vetclinicname,appday,apptime,email FROM vetappointment where email='{$_SESSION["uid"]}'";
             $result =$conn-> query($sql);
-            if ($result-> num_rows > 0) {
+            if ($result-> num_rows> 0) {
               while ($row = $result-> fetch_assoc()) {
                 echo "<tr>
                 <td>".$row['entry']."</td>
