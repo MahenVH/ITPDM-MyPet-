@@ -1,5 +1,3 @@
-<?php session_start() ?>
-
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -29,27 +27,27 @@
   <section>
 
   <div class="login">
-    <form action=".\includes\forget.php" method="post">
-        <h1>Your Password</h1>
+<?php
+      $servername = "localhost";
+      $username = "root";
+      $password = "";
+      $dbname = "mypet";
 
-        <?php 
-        if (isset($_GET["newpwd"])) {
-          if ($_GET["newpwd"] == "passwordupdated") {
-            echo '<p class="signupsuccess">Your password has been reset</p>';
+      $conn = mysqli_connect($servername,$username,$password,$dbname);
 
-          }
-        } ?>
+      $connectdb=mysqli_select_db($conn,'mypet');
+      $result=mysqli_query($conn,'select Password from signup');
 
-            <button type="submit" name="submit" href="../Login.php" > <a href="login.php">Back to Login</a></button>
+      while ($row = mysqli_fetch_array ($result))
+      {
 
-
+    echo '<input type="text" name="Namex" value='.$row['Password'].'>';
 
 
+    }
+?>
+</div>
 
-
-    </form>
-
-   </div>
 </section>
 </main>
 
