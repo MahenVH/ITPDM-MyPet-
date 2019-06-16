@@ -175,10 +175,8 @@ function validate()
     </header>
 
     <form action=".\includes\medicine.php" method="post">
-      <div class="center">
-      <label for="entryno">Entry No.</label>
-      <input type="number" id="entryno" name="entryno" value="">
-      </div>
+
+      
       <div class="center">
       <label for="petname">Pet Name</label>
       <input type="text" id="petname" name="petname" value="">

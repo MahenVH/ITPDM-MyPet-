@@ -22,6 +22,11 @@
           return true;
         }
 
+function message(){
+  alert(" first you have to log in");
+}
+
+
             function validate()
             {
                if(validatenic()   )
@@ -49,7 +54,7 @@
             <li><a href="RegisterPetDetails.html">RegisterPet</a></li>
             <li><a href="login.html">Login</a></li>
             <li ><a href="TrackingVetAppointments_VIEW_UPDATE_DELETE.html">Modify</a></li>
-            <li><a href="TrackingVetAppointmentsADD.php">Add </a></li>
+            <li><a onclick="message()" href="">Add </a></li>
           </ul>
         </nav>
       </div>
