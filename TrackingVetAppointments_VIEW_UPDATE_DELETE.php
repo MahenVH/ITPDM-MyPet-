@@ -75,7 +75,6 @@ session_start();
         <nav>
           <ul>
             <li class="current"><a href="HomePage.php">Home</a></li>
-            <li ><a href="Gallery.php">Gallery</a></li>
             <li><a href="RegisterPetDetails.html">RegisterPet</a></li>
             <li><a href="Login.php">Login</a></li>
             <li><div class="dropdown">
@@ -189,9 +188,7 @@ session_start();
 
           </table>
 
-          <div>
-          <button type="submit" name="view" class="button1">View</button>
-          </div>
+          
         </form>
 
   </body>
