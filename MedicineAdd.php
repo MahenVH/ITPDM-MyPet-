@@ -204,6 +204,10 @@ function validate()
       <label for="appday">Expiry Date</label>
       <input type="date" id="expdate" name="expdate" value="">
       </div>
+      <div class="center">
+      <label for="email">Email</label>
+      <input type="text" id="email" name="email" value="">
+      </div>
       <div class="buttons">
       <button type="submit" name="add" class="button" onclick="validate()">Add</button>
       <button type="reset" name="clear" class="button">Clear</button>

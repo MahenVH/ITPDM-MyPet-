@@ -20,10 +20,11 @@ $petname=$_POST['petname'];
 $medicine=$_POST['medicine'];
 $phamacy=$_POST['pharmacy'];
 $Edate=$_POST['expdate'];
+$email=$_POST['email'];
 
 
 
-$sql = "INSERT INTO medicine( petname, medicine, pharmacy, expdate) VALUES ('$petname','$medicine','$phamacy','$Edate')";
+$sql = "INSERT INTO medicine( petname, medicine, pharmacy, expdate,email) VALUES ('$petname','$medicine','$phamacy','$Edate','$email')";
 if ($conn->query($sql) === TRUE)
 
 {
@@ -33,5 +34,5 @@ else
 {
 	echo 'Not inserted';
 }
-header("Location:../MedicineAdd.html");
+header("Location:../MedicineAdd.php");
 ?>
