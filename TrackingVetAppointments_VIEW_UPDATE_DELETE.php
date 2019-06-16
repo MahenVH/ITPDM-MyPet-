@@ -100,8 +100,17 @@ session_start();
           </div>
           </li>
 
-
-
+          <li><div class="dropdown">
+            <button class="dropbtn"> Extras
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="Gallery.php">Gallery</a>
+              <a href="NoticeBoard.php">Notice Board</a>
+            </div>
+          </button>
+        </div>
+        </li>
 
           </ul>
         </nav>
@@ -188,7 +197,7 @@ session_start();
 
           </table>
 
-          
+
         </form>
 
   </body>
