@@ -169,6 +169,7 @@ session_start();
   display: block;
 }
 
+
 </style>
 
 
@@ -265,12 +266,11 @@ session_start();
 <font color="white"><p>Are you tired of keeping records of your pets ? And keep searching for the records when its time to visit the vet. Do Not worry, Pets website is a free service which provides the perfect solution for you from storing pictures of your beautiful pet to keeping track of your pets vaccinations, Vet Appointment dates etc. We allow our users to create their own profile and store information of their pet which only can be viewed by the owner. Sign Up now and never miss a vets appointment since we will notify you about all your upcoming appointments. Pets.com </p></font><br>
 
 
-<font color ="white"><tag>Contact Us</tag></font><br>
+<font color ="white" ><tag>Contact Us</tag></font><br>
 
 <font Color ="white"><tag>Address - 123 bumble bee rd, down memory lane</tag></font><br>
 <font Color ="white"><tag>Telephone - 0112729729 </tag></font><br>
 <font Color ="white"><tag>Email - 1234getonthedancefloor@gmail.com </tag></font>
-
 
 
 
