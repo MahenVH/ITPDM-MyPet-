@@ -119,7 +119,7 @@
 
       <div class="wrapper">
 
-        <h2 align:center >Notice Board</h2>
+        <h2 align:center style="color:white;" >Notice Board</h2>
         <hr>
         <section class="gallery-container">
           <?php
