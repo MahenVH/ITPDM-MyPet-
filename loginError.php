@@ -10,10 +10,6 @@ session_start();
     <script type="text/javascript">
 
 
-
-
-
-
         function validateEmail()
         {
           var email= document.getElementById("uid").value;
@@ -144,9 +140,6 @@ session_start();
       <P color="#FF0000	"> Invalid username or password</p>
 
 
-
-
-
         <br><a float="right" href="showPassword.php" >Forgot Password</a></br><br> <a href="signup.php" >Sign up</a></br>
 
 
@@ -156,8 +149,6 @@ session_start();
    </div>
 </section>
 </main>
-
-
 
 <footer>General web design, Copyright &copy 2018</footer>
   </body>
