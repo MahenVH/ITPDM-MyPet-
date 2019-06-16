@@ -50,11 +50,9 @@ function message(){
         <nav>
           <ul>
             <li ><a href="HomePage.html">Home</a></li>
-            <li class="current"><a href="Gallery.php">Gallery</a></li>
-            <li><a href="RegisterPetDetails.html">RegisterPet</a></li>
+            
             <li><a href="login.html">Login</a></li>
-            <li ><a href="TrackingVetAppointments_VIEW_UPDATE_DELETE.html">Modify</a></li>
-            <li><a onclick="message()" href="">Add </a></li>
+
           </ul>
         </nav>
       </div>
