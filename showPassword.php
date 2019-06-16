@@ -49,9 +49,9 @@ function message(){
         <img src=".\img\catdog.png" width="250px" height="180px" align=top >
         <nav>
           <ul>
-            <li ><a href="HomePage.html">Home</a></li>
-            
-            <li><a href="login.html">Login</a></li>
+            <li ><a href="HomePageBeforeLogin.html">Home</a></li>
+
+            <li><a href="login.php">Login</a></li>
 
           </ul>
         </nav>

@@ -39,7 +39,7 @@ mysqli_close($conn);}
     header('Location:../HomePage.php');
   }else{
     $_SESSION['message']="Incorrect Username or Password.";
-          header("location:../login.php");
+          header("location:../loginError.php");
           alert("Invalid username or password");
 
   }
