@@ -142,7 +142,7 @@ session_start();
             }
 
             /*$_SESSION["uid"]= $Email;*/
-            $sql="SELECT * FROM medicine ";
+            $sql="SELECT * FROM medicine where email='{$_SESSION["uid"]}' ";
             $result =$conn-> query($sql);
             if ($result-> num_rows> 0) {
               while ($row = $result-> fetch_assoc()) {

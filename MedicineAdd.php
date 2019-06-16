@@ -176,7 +176,7 @@ function validate()
 
     <form action=".\includes\medicine.php" method="post">
 
-      
+
       <div class="center">
       <label for="petname">Pet Name</label>
       <input type="text" id="petname" name="petname" value="">
@@ -192,6 +192,10 @@ function validate()
       <div class="center">
       <label for="appday">Expiry Date</label>
       <input type="date" id="expdate" name="expdate" value="">
+      </div>
+      <div class="center">
+      <label for="email">Email</label>
+      <input type="text" id="email" name="email" value="">
       </div>
       <div class="buttons">
       <button type="submit" name="add" class="button" onclick="validate()">Add</button>
