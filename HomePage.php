@@ -268,9 +268,9 @@ session_start();
 
 <font color ="white" ><tag>Contact Us</tag></font><br>
 
-<font Color ="white"><tag>Address - 123 bumble bee rd, down memory lane</tag></font><br>
+<font Color ="white"><tag>Address - 97 Hillstreet, Colombo 7 </tag></font><br>
 <font Color ="white"><tag>Telephone - 0112729729 </tag></font><br>
-<font Color ="white"><tag>Email - 1234getonthedancefloor@gmail.com </tag></font>
+<font Color ="white"><tag>Email - pets.lk@gmail.com </tag></font>
 
 
 
