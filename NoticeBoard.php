@@ -5,6 +5,64 @@
   <title>Notice Board</title>
   <link rel="stylesheet" href="./css/NoticeBoard.css">
 
+  <style>
+
+
+  .dropdown{
+    float: left;
+    overflow: hidden;
+  }
+
+  .dropdown .dropbtn{
+    font-size: 20px;
+    border: none;
+    outline: none;
+    color:#676767;
+    padding: inherit;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+  }
+
+  .nav a:hover, .dropdown:hover .dropbtn{
+    background-color: purple;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+
+  .dropdown-content a {
+    font-size: 12px;
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+
+  .dropdown-content a:hover {
+    background-color: #717171;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .form{
+    margin-left: auto;
+    margin-right: auto;
+    display: inline-block;
+    text-align: center;
+  }
+  </style>
+
 </head>
 <body>
   <header>
@@ -13,13 +71,45 @@
       <img src=".\img\catdog.png" width="250px" height="180px" align=top >
       <nav>
         <ul>
-          <li ><a href="HomePage.html">Home</a></li>
-          <li class="current"><a href="Gallery.php">Gallery</a></li>
+          <li class="current"><a href="HomePage.php">Home</a></li>
+          <li ><a href="Gallery.php">Gallery</a></li>
           <li><a href="RegisterPetDetails.html">RegisterPet</a></li>
-          <li><a href="NoticeBoard.php">Notice Board</a></li>
-          <li><a href="login.html">Login</a></li>
-          <li ><a href="TrackingVetAppointments_VIEW_UPDATE_DELETE.html">Modify</a></li>
-          <li><a href="TrackingVetAppointmentsADD.php">Add </a></li>
+          <li><a href="Login.php">Login</a></li>
+          <li><div class="dropdown">
+            <button class="dropbtn"> Veterinarian
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="TrackingVetAppointmentsADD.php">Add appointments</a>
+              <a href="TrackingVetAppointments_VIEW_UPDATE_DELETE.php">Modify Appointments</a>
+            </div>
+            </button>
+          </div></li>
+
+          <li><div class="dropdown">
+            <button class="dropbtn"> Medical
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="MedicineAdd.php">Add Medical Details</a>
+              <a href="MedicineViewUpdateDelete.php">Modify Medical details</a>
+            </div>
+          </button>
+        </div>
+        </li>
+
+        <li><div class="dropdown">
+          <button class="dropbtn"> Extras
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="Gallery.php">Gallery</a>
+            <a href="NoticeBoard.php">Notice Board</a>
+          </div>
+        </button>
+      </div>
+      </li>
+
         </ul>
       </nav>
     </div>

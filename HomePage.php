@@ -183,7 +183,6 @@ session_start();
       <nav>
         <ul>
           <li class="current"><a href="HomePage.php">Home</a></li>
-          <li ><a href="Gallery.php">Gallery</a></li>
           <li><a href="RegisterPetDetails.html">RegisterPet</a></li>
           <li><a href="Login.php">Login</a></li>
           <li><div class="dropdown">
@@ -208,6 +207,18 @@ session_start();
           </button>
         </div>
         </li>
+
+        <li><div class="dropdown">
+          <button class="dropbtn"> Extras
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="Gallery.php">Gallery</a>
+            <a href="NoticeBoard.php">Notice Board</a>
+          </div>
+        </button>
+      </div>
+      </li>
 
 
 
