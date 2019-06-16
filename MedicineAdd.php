@@ -3,7 +3,7 @@
     <meta charset="utf-8">
     <title>TrackingVetAppointmentsADD</title>
 
-    <link rel="stylesheet" type="text/css" href=".\css\VeteriarianAppointmentsADD.css"/>
+    <link rel="stylesheet" type="text/css" href=".\css\MedicineAdd.css"/>
     <script type="text/javascript">
 
 
@@ -195,7 +195,7 @@ function validate()
       <label for="appday">Expiry Date</label>
       <input type="date" id="expdate" name="expdate" value="">
       </div>
-      <div class="button">
+      <div class="buttons">
       <button type="submit" name="add" class="button" onclick="validate()">Add</button>
       <button type="reset" name="clear" class="button">Clear</button>
       </div>
